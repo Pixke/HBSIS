@@ -10,7 +10,7 @@ namespace console_array
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("BEM VINDO A BIBLIOTECA" +
+            Console.WriteLine("BEM VINDO A BIBLIOTECA \r\n" +
                 "O QUE DESEJA FAZER?");
             
 
