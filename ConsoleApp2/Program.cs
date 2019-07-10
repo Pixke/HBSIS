@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ConsoleApp2
@@ -10,8 +11,23 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Git");
-            Console.ReadLine();
+            string[] nameList = new string [2] {"valor 1", "valor 2"};
+
+            foreach (var item in nameList)
+                Console.WriteLine(item);
+
+            string[] dateList = new string[10000];
+            DateTime fisrTime = DateTime.Now;
+
+            for (int i = 0; i < dateList.Length; i++)
+            {
+                dateList[i] = DateTime.Now.ToString("yyyy.MM.dd - HH:mm:ss.fff");
+                Console.WriteLine(dateList[i]);
+
+                Console.WriteLine((DateTime.Now - fisrTime).ToString());
+            }
+            Console.ReadKey();
+
         }
     }
 }
