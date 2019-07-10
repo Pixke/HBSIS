@@ -10,8 +10,23 @@ namespace console_array
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("BEM VINDO A BIBLIOTECA" +
+                "O QUE DESEJA FAZER?");
+            
 
+            string  [,] listaDeLivros = new string[2, 2]
+                {{"O Pequeno", "Sim" }, {"O Grande", "Não"} };
 
+            for (int i = 0; i < listaDeLivros.GetLength(0); i++)
+            {
+
+                var NomeLivro = listaDeLivros[i, 0];
+                var Disponivel = listaDeLivros[i, 1];
+
+                Console.WriteLine($"Nome do Livro:{NomeLivro} Disponivel:{Disponivel}.");
+            }
+            Console.ReadKey();
+                                            
         }
     }
 }
