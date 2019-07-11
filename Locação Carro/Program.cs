@@ -189,14 +189,14 @@ namespace Locação_Carro
         {
             MostrarMenuInicialCarros("Reservar um Carro:");
 
-            var nomedolivro = Console.ReadLine();
-            if (!PesquisaCarroParaAlocacao(nomedolivro))
+            var nomedocarro = Console.ReadLine();
+            if (PesquisaCarroParaAlocacao(nomedocarro))
             {
                 Console.Clear();
                 MostrarSejaBemVindo();
                 Console.WriteLine("Você deseja Reservar o Carro? para sim(1) para não(0)");
 
-                AlocarCarro(nomedolivro, Console.ReadKey().KeyChar.ToString() == "0");
+                AlocarCarro(nomedocarro, Console.ReadKey().KeyChar.ToString() == "1");
 
                 MostrarListaDeCarros();
 
