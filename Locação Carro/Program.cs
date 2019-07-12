@@ -201,7 +201,7 @@ namespace Locação_Carro
                 MostrarListaDeCarros();
 
                 Console.ReadKey();
-                Thread.Sleep(200);
+                    
 
                 
 

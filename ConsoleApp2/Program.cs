@@ -11,23 +11,19 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            string[] nameList = new string [2] {"valor 1", "valor 2"};
+            string primeiroAmigo = "Bil";
+            Console.WriteLine(primeiroAmigo);
 
-            foreach (var item in nameList)
-                Console.WriteLine(item);
+            string segundoAmigo = "Carlos";
+            Console.WriteLine(segundoAmigo);
 
-            string[] dateList = new string[10000];
-            DateTime fisrTime = DateTime.Now;
+            Console.WriteLine($"olá, tenho dois amigos, o {primeiroAmigo} e o {segundoAmigo}");
 
-            for (int i = 0; i < dateList.Length; i++)
-            {
-                dateList[i] = DateTime.Now.ToString("yyyy.MM.dd - HH:mm:ss.fff");
-                Console.WriteLine(dateList[i]);
+            Console.WriteLine($"O nome {primeiroAmigo} tem {segundoAmigo.Length} letras.");
+            Console.WriteLine($"O nome  {segundoAmigo} tem {primeiroAmigo.Length} letras.");
 
-                Console.WriteLine((DateTime.Now - fisrTime).ToString());
-            }
-            Console.ReadKey();
 
+            Console.ReadLine();
         }
     }
 }
