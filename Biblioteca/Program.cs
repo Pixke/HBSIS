@@ -10,12 +10,12 @@ namespace Sistema_Biblioteca
     {
         static string[,] baseDeLivros;
         static void Main(string[] args)
-        {   
+        {
             CarregaBaseDeDados();
 
             var opcaoMenu = MenuPrincipal();
 
-            while (opcaoMenu != 3)
+            while (opcaoMenu != 4)
             {
                 if (opcaoMenu == 1)
                     AlocarUmLivro();
@@ -34,11 +34,12 @@ namespace Sistema_Biblioteca
         /// </summary>
         public static void MostrarSejaBemVindo()
         {
-            Console.WriteLine("________________________________");
-            Console.WriteLine("     BEM VINDO A BIBLIOTECA     ");
-            Console.WriteLine("________________________________");
-            Console.WriteLine("      POWERED BY PROENIX     ");
-            Console.WriteLine("________________________________");
+            Console.WriteLine("________________________________________________");
+            Console.WriteLine("         BEM VINDO A BIBLIOTECA ON-LINE.        ");
+            Console.WriteLine("________________________________________________");
+            Console.WriteLine("      SISTEMA INTEGRADO - HBSIS / PHOENIX       ");
+            Console.WriteLine("________________________________________________");
+            Console.WriteLine(                                                  );
         }
         /// <summary>
         /// Metodo que mostra o menu inicial com as opções para escolha.
@@ -54,7 +55,8 @@ namespace Sistema_Biblioteca
             Console.WriteLine("O que você deseja realizar?");
             Console.WriteLine("1 - Alocar um livro.");
             Console.WriteLine("2 - Devolver um livro.");
-            Console.WriteLine("3 - Sair do sistema.");
+            Console.WriteLine("3 - Reservar um livro.");
+            Console.WriteLine("4 - Sair do sistema.");
             Console.WriteLine("Digite o número desejado:");
 
             int.TryParse(Console.ReadKey().KeyChar.ToString(), out int opcao);
@@ -66,10 +68,11 @@ namespace Sistema_Biblioteca
         /// </summary>
         public static void CarregaBaseDeDados()
         {
-            baseDeLivros = new string[2, 2]
+            baseDeLivros = new string[3, 2]
             {
                 {"O pequeno","sim"},
-                {"O grande","não"}
+                {"O grande","não"},
+                {"Super", "reservado"}
             };
         }
         /// <summary>
@@ -77,7 +80,7 @@ namespace Sistema_Biblioteca
         /// </summary>
         /// <param name="nomeLivro">Nome do livro a ser pesquisado</param>
         /// <returns>Retorna verdadeiro em caso o livro estiver livre para alocação.</returns>
-        public static bool? PesquisaLivroParaAlocacao(string nomeLivro)
+        public static bool? PesquisaLivroParaAlocacao(ref string nomeLivro)
         {
             for (int i = 0; i < baseDeLivros.GetLength(0); i++)
             {
@@ -100,7 +103,7 @@ namespace Sistema_Biblioteca
                 Console.WriteLine("Digite o nome do livro a ser pesquisado:");
                 nomeLivro = Console.ReadLine();
 
-                return PesquisaLivroParaAlocacao(nomeLivro);
+                return PesquisaLivroParaAlocacao(ref nomeLivro);
             }
 
             return null;
@@ -132,7 +135,7 @@ namespace Sistema_Biblioteca
             MostrarMenuInicialLivros("Alocar um livro:");
 
             var nomedolivro = Console.ReadLine();
-            var resultadoPesquisa = PesquisaLivroParaAlocacao(nomedolivro);
+            var resultadoPesquisa = PesquisaLivroParaAlocacao(ref nomedolivro);
 
             if (resultadoPesquisa != null && resultadoPesquisa == true)
             {
@@ -161,7 +164,7 @@ namespace Sistema_Biblioteca
 
             for (int i = 0; i < baseDeLivros.GetLength(0); i++)
             {
-                Console.WriteLine($"Nome: {baseDeLivros[i, 0]} Disponivel:{baseDeLivros[i, 1]}");
+                Console.WriteLine($"Nome: {baseDeLivros[i, 0]} | Disponivel: >{baseDeLivros[i, 1]}<");
             }
         }
         public static void DesalocarUmLivro()
@@ -171,7 +174,7 @@ namespace Sistema_Biblioteca
             MostrarListaDeLivros();
 
             var nomedolivro = Console.ReadLine();
-            var resultadoPesquisa = PesquisaLivroParaAlocacao(nomedolivro);
+            var resultadoPesquisa = PesquisaLivroParaAlocacao(ref nomedolivro);
 
             if (resultadoPesquisa != null && resultadoPesquisa == false)
             {
@@ -199,6 +202,7 @@ namespace Sistema_Biblioteca
 
             Console.WriteLine($"Menu - {operacao}");
             Console.WriteLine("Digite o nome do livro para realizar a operação:");
+            MostrarListaDeLivros();
         }
         /// <summary>
         /// Metodo que compara duas string deixando em caixa baixa e removendo espaços vazios dentro da mesma.
@@ -206,10 +210,10 @@ namespace Sistema_Biblioteca
         /// <param name="primeiro">Primeira string a ser comparada.</param>
         /// <param name="segundo">Segunda string a ser comparada.</param>
         /// <returns>Retorna o resultado desta comparação.</returns>
-        public static bool CompararNomes(string primeiro, string segundo)
+        public static bool CompararNomes(string informacaoParaComparar, string informacaoASerComparada)
         {
-            if (primeiro.ToLower().Replace(" ", "")
-                    == segundo.ToLower().Replace(" ", ""))
+            if (informacaoParaComparar.ToLower().Replace(" ", "")
+                    == informacaoASerComparada.ToLower().Replace(" ", ""))
                 return true;
 
             return false;
