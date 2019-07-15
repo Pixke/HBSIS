@@ -28,7 +28,9 @@ namespace EXERCICIO_2___BOLO
             IngredientesMassa();
             Thread.Sleep(700);
             IgredientesCobertura();
-            Thread.Sleep(700);
+            Console.WriteLine("          ENTER PARA PROSEGUIR.");
+            Console.ReadKey();
+            Console.Clear();
             PreparoMassa();
             Thread.Sleep(700);
             PreparoCobertura();
