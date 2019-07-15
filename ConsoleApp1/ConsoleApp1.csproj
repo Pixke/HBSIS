@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C7A81101-5FEE-4636-81BB-542DE07D7EC9}</ProjectGuid>
+    <ProjectGuid>{4C0C61F8-D014-4CEF-9819-E21BBA349266}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PROGRAMA_BEEP</RootNamespace>
-    <AssemblyName>PROGRAMA_BEEP</AssemblyName>
+    <RootNamespace>ConsoleApp1</RootNamespace>
+    <AssemblyName>ConsoleApp1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
