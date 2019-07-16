@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
-namespace InsertAndRemoveInList
+namespace ProjetoFinalConsole
 {
     class Program
     {
@@ -15,7 +16,11 @@ namespace InsertAndRemoveInList
             //Indicador dos registro realizados em nosso sitema
             int IndiceBaseDeDados = 0;
             //Apresentação inicial do nosso sistema
-            Console.WriteLine("Iniciando sistema de lista de nome e idade.");
+            Console.WriteLine("BEM VINDO A BIBLIOTECA HBSIS");
+            Console.WriteLine("                            ");
+            Thread.Sleep(1000);
+            Console.WriteLine("Aguarde... Carregando Base de Dados");
+            Thread.Sleep(4000);
             //Criamos a variavel fora para não ser criada novamente 
             var escolhaInicial = ApresentaMenuInicial();
             //Loop infinito ate que de uma treta
@@ -45,21 +50,22 @@ namespace InsertAndRemoveInList
             }
         }
         /// <summary>
-        /// Apresenta as  informações do menu inicial.
+        /// Apresenta as  informações do Menu Principal.
         /// </summary>
         /// <returns>Retorna o menu escolhido.</returns>
         public static string ApresentaMenuInicial()
         {
-            //Entrou no menu inicial inicializa a limpeza da tela
+            //Entrou no Menu Principal inicializa a limpeza da tela
             Console.Clear();
-            Console.WriteLine("Menu");
-            Console.WriteLine("1 - Inseir um novo registro.");
-            Console.WriteLine("2 - Remover um novo registro.");
-            Console.WriteLine("3 - Listar informações.");
-            Console.WriteLine("4 - Lista as informações desativadas.");
+            Console.WriteLine("       ~> MENU PRINCIPAL <~    ");
+            Console.WriteLine("                               ");
+            Console.WriteLine("1 - Adicionar Livro no Registro");
+            Console.WriteLine("2 - Remover Livro do Registro.");
+            Console.WriteLine("3 - Listar Livros Cadastrados.");
+            Console.WriteLine("4 - Listar os Livros Excluídos do Registro.");
             Console.WriteLine("5 - Sair do sistema.");
-
-            Console.WriteLine("Digite o número da opção desejada:");
+            Console.WriteLine("                     ");
+            Console.WriteLine("Escolha uma das Opções e Tecle Enter:");
             //retorna diretamente o menu escolhido.
             return Console.ReadLine();
         }
@@ -68,15 +74,16 @@ namespace InsertAndRemoveInList
         /// </summary>
         /// <param name="baseDeDados">Basse de dados como ref para alterar para todos os metodos</param>
         /// <param name="indiceBase">Indice da nossa base como red para alterar para todos os metodos</param>
-        public static void InseriValoresNaLista(ref string[,] baseDeDados, ref int indiceBase)
+        public static void InseriValoresNaLista(ref string[,] baseDeDados, ref int
+            indiceBase)
         {
-            Console.WriteLine("---------Inserindo valores na lista---------");
+            Console.WriteLine("--Adicionando Livro no Registro--");
 
-            Console.WriteLine("Informe um nome:");
+            Console.WriteLine("Informe o Nome do Livro:");
             //Pegamos a informação digitada pelo usuario, aqui neste elemento esperamos o nome da pessoa
             var nome = Console.ReadLine();
 
-            Console.WriteLine("Informe a idade");
+            Console.WriteLine("Informe o Autor do Livro");
             //Aqui pegamos a idade da pessoa digitada pelo usuario do sistema
             var idade = Console.ReadLine();
             //Aumenta o tamanho da nossa lista quando chegou no limite.
@@ -101,9 +108,9 @@ namespace InsertAndRemoveInList
                 //Finalizamos aqui para apenas inseir um registro por vez
                 break;
             }
-            //Informamos para o usuario que finalizou o registro e agora o mesmo irá voltar para o menu inicial
-            Console.WriteLine("Registro cadastrado com sucesso!");
-            Console.WriteLine("Para voltar ao menu inicial, basta apertar qualquer tecla.");
+            //Informamos para o usuario que finalizou o registro e agora o mesmo irá voltar para o Menu Principal
+            Console.WriteLine("Livro Cadastrado com Sucesso!");
+            Console.WriteLine("Para Voltar ao Menu Principal, Tecle Enter.");
             Console.ReadKey();
 
         }
@@ -116,25 +123,25 @@ namespace InsertAndRemoveInList
         public static void MostrarInformacoes(string[,] baseDeDados, string mostrarRegistroNAtivos = "false")
         {
             //informamos em que tela o mesmo esta
-            Console.WriteLine("Apresentação das informações dentro da base de dados.");
+            Console.WriteLine("Apresentação dos Livros Existentes no Registro.");
             //Comparação que identifica visualmente quais registros estamos mostrando
             if (mostrarRegistroNAtivos == "true")
-                Console.WriteLine("Registros desativados dentro do sistema.");
+                Console.WriteLine("Livros Apagados do Registro.");
             //Laço simples aonde o mesmo mostra de maneira formatada as informações 
             for (int i = 0; i < baseDeDados.GetLength(0); i++)
             {
                 //Aqui deixamos de mostrar as informações que foram desabilitadas dentro do sistema.
                 if (baseDeDados[i, 3] != mostrarRegistroNAtivos)
                     Console.WriteLine($"ID {baseDeDados[i, 0]} " +
-                          $"- Nome:{baseDeDados[i, 1]} " +
-                          $"- Idade:{baseDeDados[i, 2]}" +
+                          $"- Título do Livro:{baseDeDados[i, 1]} " +
+                          $"- Autor:{baseDeDados[i, 2]}" +
                           $"- Data Alteração:{baseDeDados[i, 4]}");
             }
 
             //Finalizamos a operação e indicamos que não existe mais operações a serem realizadas em
             //nosso metodo.
-            Console.WriteLine("Resultados apresentados com sucesso!");
-            Console.WriteLine("Para voltar ao menu inicial informar qualquer tecla.");
+            Console.WriteLine("Lista Atualizada!");
+            Console.WriteLine("Para Voltar ao Menu Principal, Pressione Qualquer Tecla");
             Console.ReadKey();
         }
         /// <summary>
@@ -144,7 +151,7 @@ namespace InsertAndRemoveInList
         public static void RemoverInformacoes(ref string[,] baseDeDados)
         {
             //Identificamos a tela do menu que o usuario está
-            Console.WriteLine("Area de remoção de registro do sistema.");
+            Console.WriteLine("Remover Livro do Registro");
             //Laço de repetição que mostra as informações dentro da tela de exclusão para facilitar a 
             //escolha do id corretamente
             for (int i = 0; i < baseDeDados.GetLength(0); i++)
@@ -152,13 +159,13 @@ namespace InsertAndRemoveInList
 
                 if (baseDeDados[i, 3] != "false")
                     Console.WriteLine($"ID:{baseDeDados[i, 0]}" +
-                        $"- Nome:{baseDeDados[i, 1]} " +
-                    $"- Idade:{baseDeDados[i, 2]}");
+                        $"- Título do Livro:{baseDeDados[i, 1]} " +
+                    $"- Autor:{baseDeDados[i, 2]}");
             }
 
 
             //Indicamos para usuario informar um id dentro do nosso sistema para remover
-            Console.WriteLine("Informe o id do registro a ser removido:");
+            Console.WriteLine("Digite o ID do Livro Para Apagar do Registro:");
             var id = Console.ReadLine();
             //outro laço agora para remover o registro caso o mesmo exista
             for (int i = 0; i < baseDeDados.GetLength(0); i++)
@@ -173,8 +180,8 @@ namespace InsertAndRemoveInList
                 }
             }
             //Finalizamos as operações desta tela
-            Console.WriteLine("Operações finalizadas.");
-            Console.WriteLine("Para retornar ao menu inicial apertar qualquer tecla.");
+            Console.WriteLine("Processo Concluído.");
+            Console.WriteLine("Para Voltar ao Menu Principal, Pressione Qualquer Tecla");
             Console.ReadKey();
         }
         /// <summary>
@@ -215,7 +222,7 @@ namespace InsertAndRemoveInList
                     baseDeDados[i, 4] = listaCopia[i, 4];
                 }
                 //indicamos que neste ponto a lista foi atualizada em seu tamanho.
-                Console.WriteLine("O tamanho da lista foi atualizado.");
+                Console.WriteLine("O Tamanho do Registro Foi Atualizado");
             }
         }
     }
