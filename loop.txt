@@ -1,0 +1,7 @@
+{
+	var countador = 0;
+	while (countador < 100)
+	{
+		Console. writeline("inicio do filme");
+	}
+{
