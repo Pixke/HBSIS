@@ -1,0 +1,16 @@
+Criar aplicação final da biblioteca
+- A Aplicação da biblioteca deve seguir os modelos de desenvolvimento .net C#
+- O mesmo deve conter uma lista dinamica para inserir os registros dentro do sistema
+- informações que o mesmo deve apresentar:
+	- ID
+	- Nome do livro
+	- Autor:
+	- Data de alteração (inclusão e Exclusão)
+
+- Lembramos que se o registro está ativo ou inativo; o item deve ser apresentado de acordo com estas informações!
+
+- O mesmo deve conter um menu para remover item da lista de acordo com os modelos apresentados;
+- um menu para listar todos os itens (novos e Excluídos)
+- uma opção para sair do sistema
+
+A nomeação do projeto deve ser feita com o nome de *ProjetoFinalConsole*
