@@ -104,7 +104,8 @@ namespace EXERCICIO_2___BOLO
             Thread.Sleep(250);
             Console.WriteLine(" ENQUANTO O BOLO ASSA, EM UMA PANELA, COLOQUE TODOS OS");
             Console.WriteLine(" INGREDIENTES DA COBERTURA E MEXA BEM ATÉ LEVANTAR FERVURA.");
-            Console.WriteLine(" DEPOIS ESPALHE SOBRE O BOLO AINDA QUENTE E QUANDO ESFRIAR VAI FORMAR UMA CASQUINHA.");
+            Console.WriteLine(" DEPOIS ESPALHE SOBRE O BOLO AINDA QUENTE E QUANDO " +
+                "\r\n ESFRIAR VAI FORMAR UMA CASQUINHA.");
             Console.WriteLine("                                                  ");
             Thread.Sleep(250);
             Console.WriteLine(" SIMPLES, NÃO? ESPERO QUE GOSTEM!");

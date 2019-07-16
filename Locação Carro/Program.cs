@@ -65,7 +65,7 @@ namespace Locação_Carro
             Console.WriteLine("2 - Reservar um Carro.");
             Console.WriteLine("3 - Devolver um Carro.");
             Console.WriteLine("4 - Sair do sistema.");
-            Console.WriteLine("Digite o número desejado:");
+            Console.WriteLine("Digite o Número da Opção Desejada:");
 
             int.TryParse(Console.ReadKey().KeyChar.ToString(), out int opcao);
 
@@ -78,9 +78,9 @@ namespace Locação_Carro
         {
             baseDeCarros = new string[3, 3]
             {
-                {"ka",      "2000",     "sim"},
-                {"onix",    "2000",     "não"},
-                {"cg",      "2000",     "reservado"}
+                {"KA",         "2018",     "sim"},
+                {"ONIX",       "2019",     "não"},
+                {"CG Fan",     "2010",     "reservado"}
             };
         }
         /// <summary>

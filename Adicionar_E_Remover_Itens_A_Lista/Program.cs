@@ -158,7 +158,7 @@ namespace InsertAndRemoveInList
 
 
             //Indicamos para usuario informar um id dentro do nosso sistema para remover
-            Console.WriteLine("Informe o id do registro a ser removido:");
+            Console.WriteLine("Informe o ID do Registro a ser Rmovido:");
             var id = Console.ReadLine();
             //outro laço agora para remover o registro caso o mesmo exista
             for (int i = 0; i < baseDeDados.GetLength(0); i++)
@@ -173,8 +173,8 @@ namespace InsertAndRemoveInList
                 }
             }
             //Finalizamos as operações desta tela
-            Console.WriteLine("Operações finalizadas.");
-            Console.WriteLine("Para retornar ao menu inicial apertar qualquer tecla.");
+            Console.WriteLine("Operações Concluídas!");
+            Console.WriteLine("Para Retornar ao Menu Inicial, Pressione Qualquer tecla.");
             Console.ReadKey();
         }
         /// <summary>
@@ -215,7 +215,7 @@ namespace InsertAndRemoveInList
                     baseDeDados[i, 4] = listaCopia[i, 4];
                 }
                 //indicamos que neste ponto a lista foi atualizada em seu tamanho.
-                Console.WriteLine("O tamanho da lista foi atualizado.");
+                Console.WriteLine("O Tamanho do Registro Foi Atualizado.");
             }
         }
     }
