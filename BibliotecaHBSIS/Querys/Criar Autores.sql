@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Autores]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Nome] VARCHAR(1200) NOT NULL, 
+    [Descricao] VARCHAR(2000) NOT NULL, 
+)

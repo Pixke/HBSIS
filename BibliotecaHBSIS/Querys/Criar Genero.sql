@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Generos]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Titulo] VARCHAR(1200) NOT NULL, 
+    [Tipo] VARCHAR(200) NOT NULL, 
+    [Descricao] VARCHAR(1000) NOT NULL
+)

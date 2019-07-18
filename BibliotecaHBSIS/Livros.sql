@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Livros]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Titulo] VARCHAR(1200) NOT NULL, 
+    [Autor] VARCHAR(200) NOT NULL, 
+    [Editora] VARCHAR(200) NULL
+)
