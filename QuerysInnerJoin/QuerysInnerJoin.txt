@@ -1,7 +1,6 @@
-select Nome as 'Marcas' from Marcas where UsuInc = 1
+select Nome as 'Marcas' from Marcas where UsuInc = 1;
 
-select Nome as 'Marcas' from Marcas where UsuInc = 2
-
+select Nome as 'Marcas' from Marcas where UsuInc = 2;
 
 select count(Nome) as 'Quantidade' from Marcas where UsuInc = 1
 order by 'Quantidade' asc;
@@ -9,14 +8,12 @@ order by 'Quantidade' asc;
 select count(Nome) as 'Quantidade' from Marcas where UsuInc = 2
 order by 'Quantidade' asc;
 
-
-
 select count(Nome) as 'Quantidade' from Marcas
 where UsuInc = 1 or UsuInc = 2;
 
-select Modelo as 'Carro' from Carros where UsuInc = 1
+select Modelo as 'Carro' from Carros where UsuInc = 1;
 
-select Modelo as 'Carro' from Carros where UsuInc = 2
+select Modelo as 'Carro' from Carros where UsuInc = 2;
 
 select count(Modelo) as 'Quantidade' from Carros where UsuInc = 1
 order by 'Quantidade' asc;
@@ -82,7 +79,6 @@ select sum (Valor * Quantidade) as 'Total de Vendas'
 from Vendas 
 where UsuInc = 2;
 
-
 select sum (Quantidade) as 'Total de Vendas' 
 from Vendas 
 where UsuInc = 1;
@@ -90,7 +86,6 @@ where UsuInc = 1;
 select sum (Quantidade) as 'Total de Vendas' 
 from Vendas 
 where UsuInc = 2;
-
 
 select sum (Quantidade) as 'Total de Vendas' 
 from Vendas 
@@ -117,19 +112,3 @@ from vendas v
 inner join carros c on c.id = v.Carro 
 group by c.modelo, year(v.datInc)
 order by Qtde;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
