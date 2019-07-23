@@ -112,3 +112,19 @@ from vendas v
 inner join carros c on c.id = v.Carro 
 group by c.modelo, year(v.datInc)
 order by Qtde;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
