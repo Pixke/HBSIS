@@ -1,6 +1,6 @@
-select Nome as 'Marcas' from Marcas where UsuInc = 1
+select Nome as 'Marcas' from Marcas where UsuInc = 1;
 
-select Nome as 'Marcas' from Marcas where UsuInc = 2
+select Nome as 'Marcas' from Marcas where UsuInc = 2;
 
 
 select count(Nome) as 'Quantidade' from Marcas where UsuInc = 1
@@ -14,9 +14,9 @@ order by 'Quantidade' asc;
 select count(Nome) as 'Quantidade' from Marcas
 where UsuInc = 1 or UsuInc = 2;
 
-select Modelo as 'Carro' from Carros where UsuInc = 1
+select Modelo as 'Carro' from Carros where UsuInc = 1;
 
-select Modelo as 'Carro' from Carros where UsuInc = 2
+select Modelo as 'Carro' from Carros where UsuInc = 2;
 
 select count(Modelo) as 'Quantidade' from Carros where UsuInc = 1
 order by 'Quantidade' asc;
