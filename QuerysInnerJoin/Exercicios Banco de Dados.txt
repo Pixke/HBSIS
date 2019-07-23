@@ -36,18 +36,42 @@ Todos os selects deve estar dentro de uma pasta chamada QuerysInnerJoin dentro d
 12//Trazer o mês de cada ano que retornou o maior valor de vendas
 		- Tradução "Retornar agrupado por mês e ordernar do maior para menor"
 
-Trazer o valor total de vendas que Felipe realizou
-Trazer o valor total de vendas que Giomar realizou
+13//Trazer o valor total de vendas que Felipe realizou
+13//Trazer o valor total de vendas que Giomar realizou
 
-Trazer a quantidade total de vendas que Felipe realizou
-Trazer a quantidade de vendas que Giomar realizou
+14//Trazer a quantidade total de vendas que Felipe realizou
+14//Trazer a quantidade de vendas que Giomar realizou
 
-Trazer a quantidade total de vendas que Felipe e Giomar realizaram ordenando do maior para menor
-Trazer o valor de vendas que Felipe e Giomar realizaram ordenando do maior para menor
+15//Trazer a quantidade total de vendas que Felipe e Giomar realizaram ordenando do maior para menor
+15//Trazer o valor de vendas que Felipe e Giomar realizaram ordenando do maior para menor
 
-Trazer  a marca mais vendida de todos os anos
-		- Tradução "Retornar todas as marcas que foram vendidas mas ordernada da maior para menor"
-Trazer o valor total da marca mais vendida de todos os anos		
+16//Trazer  a marca mais vendida de todos os anos
+Tradução "Retornar todas as marcas que foram vendidas mas ordernada da maior para menor"
 
-Trazer a quantidade do carro mais vendido de todos os anos
-Trazer o valor do carro mais vendido de todos os anos
+16//Trazer o valor total da marca mais vendida de todos os anos		
+
+17//Trazer a quantidade do carro mais vendido de todos os anos
+17//Trazer o valor do carro mais vendido de todos os anos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

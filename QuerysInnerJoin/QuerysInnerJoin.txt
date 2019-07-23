@@ -1,82 +1,122 @@
-1//
 select Nome as 'Marcas' from Marcas where UsuInc = 1
 
 select Nome as 'Marcas' from Marcas where UsuInc = 2
-2//
+
+
 select count(Nome) as 'Quantidade' from Marcas where UsuInc = 1
-order by 'Quantidade' asc
+order by 'Quantidade' asc;
 
 select count(Nome) as 'Quantidade' from Marcas where UsuInc = 2
-order by 'Quantidade' asc
-3//
+order by 'Quantidade' asc;
+
+
+
 select count(Nome) as 'Quantidade' from Marcas
-where UsuInc = 1 or UsuInc = 2
-4//
+where UsuInc = 1 or UsuInc = 2;
+
 select Modelo as 'Carro' from Carros where UsuInc = 1
 
 select Modelo as 'Carro' from Carros where UsuInc = 2
-5//
+
 select count(Modelo) as 'Quantidade' from Carros where UsuInc = 1
-order by 'Quantidade' asc
+order by 'Quantidade' asc;
 
 select count(Modelo) as 'Quantidade' from Carros where UsuInc = 2
-order by 'Quantidade' asc
-6//
-select count (Modelo) as 'Quantidade' from Carros 
-where UsuInc = 1 or UsuInc = 2
-7//
-select Modelo as 'Carros' from Carros
-inner join Marcas on Marcas.Id = Carros.Marca
-where Marcas.UsuInc = 1
+order by 'Quantidade' asc;
+
+select count (Modelo) as 'Quantidade' from Carros
+where UsuInc = 1 or UsuInc = 2;
 
 select Modelo as 'Carros' from Carros
 inner join Marcas on Marcas.Id = Carros.Marca
-where Marcas.UsuInc = 2
-8//
+where Marcas.UsuInc = 1;
+
+select Modelo as 'Carros' from Carros
+inner join Marcas on Marcas.Id = Carros.Marca
+where Marcas.UsuInc = 2;
+
 select count(Carros.Id) as 'Quantidade' from Carros
 inner join Marcas on Marcas.Id = Carros.Marca
 where Marcas.UsuInc = 1
-order by 'Quantidade' asc
+order by 'Quantidade' asc;
 
 select count(Carros.Id) as 'Quantidade' from Carros
 inner join Marcas on Marcas.Id = Carros.Marca
 where Marcas.UsuInc = 2
-order by 'Quantidade' asc
-9//
-select 
-sum (Valor * Quantidade) as 'Valor Total' 
-from Vendas 
-where year (DatInc) = 2019
+order by 'Quantidade' asc;
 
-select 
-sum (Quantidade) as 'Total Vendas' 
+select sum (Valor * Quantidade) as 'Valor Total'
 from Vendas 
-where year (DatInc) = 2019
-10//
-select
-sum (Valor * Quantidade) as 'Valor Total', year (DatInc) as 'Ano'
+where year (DatInc) = 2019;
+
+select sum (Quantidade) as 'Total Vendas'
+from Vendas
+where year (DatInc) = 2019;
+
+select sum (Valor * Quantidade) as 'Valor Total', year (DatInc) as 'Ano'
 from Vendas 
 group by year (DatInc)
-order by [Valor Total] desc
+order by [Valor Total] desc;
 
-select 
-sum (Quantidade) as 'Total Vendas' , year (DatInc) as 'Ano'
-from Vendas 
-group by year (DatInc) 
-order by [Total Vendas] desc 
-11//
-select
-sum (Valor * Quantidade) as 'Valor Total', CONCAT(month (DatInc),'/', YEAR (DatInc)) as 'Mês/Ano'
-from Vendas 
+select ;sum (Quantidade) as 'Total Vendas' , year (DatInc) as 'Ano'
+from Vendas
+group by year (DatInc)
+order by [Total Vendas] desc;
+
+select sum (Quantidade) as 'Valor Total', CONCAT(month (DatInc),'/', YEAR (DatInc)) as 'Mês/Ano'
+from Vendas
+group by CONCAT(month (DatInc),'/', YEAR (DatInc))
+order by [Valor Total] desc;
+
+select sum (Valor * Quantidade) as 'Valor Total', CONCAT(month (DatInc),'/', YEAR (DatInc)) as 'Mês/Ano'
+from Vendas
 group by CONCAT(month (DatInc),'/', YEAR (DatInc)) 
-order by [Valor Total] desc
-12//
+order by [Valor Total] desc;
 
 
+select sum (Valor * Quantidade) as 'Total de Vendas' 
+from Vendas 
+where UsuInc = 1;
+
+select sum (Valor * Quantidade) as 'Total de Vendas' 
+from Vendas 
+where UsuInc = 2;
 
 
+select sum (Quantidade) as 'Total de Vendas' 
+from Vendas 
+where UsuInc = 1;
+
+select sum (Quantidade) as 'Total de Vendas' 
+from Vendas 
+where UsuInc = 2;
 
 
+select sum (Quantidade) as 'Total de Vendas' 
+from Vendas 
+where UsuInc = 1 or UsuInc = 2
+order by [Total de Vendas] asc;
+
+select sum (Valor * Quantidade) as 'Total de Vendas' 
+from Vendas 
+where UsuInc = 1 or UsuInc = 2
+order by [Total de Vendas] asc;
+
+select
+	Marcas.Nome, 
+	sum (Vendas.Quantidade) as 'Quantidade'
+	from Marcas
+inner join Carros on Carros.Marca = Marcas.Id
+inner join Vendas on Vendas.Carro = Carros.Id
+group by Marcas.Nome
+order by Quantidade desc;
+
+
+select c.Modelo, year(v.datInc) 'Ano',  sum(v.Quantidade) as 'Qtde'
+from vendas v 
+inner join carros c on c.id = v.Carro 
+group by c.modelo, year(v.datInc)
+order by Qtde;
 
 
 
