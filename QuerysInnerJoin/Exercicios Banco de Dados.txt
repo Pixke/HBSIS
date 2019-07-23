@@ -1,0 +1,53 @@
+Todos os selects deve estar dentro de uma pasta chamada QuerysInnerJoin dentro do git diretorio padrão
+
+
+1//Trazer somente as marcas que Felipe cadastrou
+1//Trazer somente as marcas que Giomar cadastrou
+
+
+2//Trazer somente a quantidade de marcas que Felipe cadastrou do maior para menor
+2//Trazer somente a quantidade de marcas que Giomar cadastrou do menor para maior
+
+3//Trazer somente a quantidade de marcas que Felipe e Giomar cadastraram 
+
+4//Trazer somente os carros que Felipe cadastrou
+4//Trazer somente os carros que Giomar cadastrou
+
+5//Trazer somente a quantidade de carros que Felipe cadastrou maior para menor
+5//Trazer somente a quantidade de carros que Giomar cadastrou menor para maior
+
+6//Trazer somente a quantidade de carros que Felipe e Giomar cadastraram 
+
+7//Trazer somente os carros das marcas que Felipe cadastrou
+7//Trazer somente os carros das marcas que Giomar cadastrou
+
+8//Trazer somente a quantidade de carros das marcas que Felipe cadastrou maior para menor
+8//Trazer somente a quantidade de carros das marcas que Giomar cadastrou menor para maior
+
+9//Trazer o valor total de vendas 2019 isolado
+9//Trazer a quantidade total de vendas 2019 isolado
+
+10//Trazer o valor total de vendas em cada ano e ordernar do maior para o menor
+10//Trazer a quantidade de vendas em cada ano e ordernar do maior para o menor
+
+11//Trazer o mês de cada ano que retornou a maior quantidade de vendas
+		- Tradução "Retornar agrupado por mês a quantidade de vendas e ordernar do maior para menor"
+		
+12//Trazer o mês de cada ano que retornou o maior valor de vendas
+		- Tradução "Retornar agrupado por mês e ordernar do maior para menor"
+
+Trazer o valor total de vendas que Felipe realizou
+Trazer o valor total de vendas que Giomar realizou
+
+Trazer a quantidade total de vendas que Felipe realizou
+Trazer a quantidade de vendas que Giomar realizou
+
+Trazer a quantidade total de vendas que Felipe e Giomar realizaram ordenando do maior para menor
+Trazer o valor de vendas que Felipe e Giomar realizaram ordenando do maior para menor
+
+Trazer  a marca mais vendida de todos os anos
+		- Tradução "Retornar todas as marcas que foram vendidas mas ordernada da maior para menor"
+Trazer o valor total da marca mais vendida de todos os anos		
+
+Trazer a quantidade do carro mais vendido de todos os anos
+Trazer o valor do carro mais vendido de todos os anos

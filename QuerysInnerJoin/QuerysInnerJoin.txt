@@ -1,0 +1,95 @@
+1//
+select Nome as 'Marcas' from Marcas where UsuInc = 1
+
+select Nome as 'Marcas' from Marcas where UsuInc = 2
+2//
+select count(Nome) as 'Quantidade' from Marcas where UsuInc = 1
+order by 'Quantidade' asc
+
+select count(Nome) as 'Quantidade' from Marcas where UsuInc = 2
+order by 'Quantidade' asc
+3//
+select count(Nome) as 'Quantidade' from Marcas
+where UsuInc = 1 or UsuInc = 2
+4//
+select Modelo as 'Carro' from Carros where UsuInc = 1
+
+select Modelo as 'Carro' from Carros where UsuInc = 2
+5//
+select count(Modelo) as 'Quantidade' from Carros where UsuInc = 1
+order by 'Quantidade' asc
+
+select count(Modelo) as 'Quantidade' from Carros where UsuInc = 2
+order by 'Quantidade' asc
+6//
+select count (Modelo) as 'Quantidade' from Carros 
+where UsuInc = 1 or UsuInc = 2
+7//
+select Modelo as 'Carros' from Carros
+inner join Marcas on Marcas.Id = Carros.Marca
+where Marcas.UsuInc = 1
+
+select Modelo as 'Carros' from Carros
+inner join Marcas on Marcas.Id = Carros.Marca
+where Marcas.UsuInc = 2
+8//
+select count(Carros.Id) as 'Quantidade' from Carros
+inner join Marcas on Marcas.Id = Carros.Marca
+where Marcas.UsuInc = 1
+order by 'Quantidade' asc
+
+select count(Carros.Id) as 'Quantidade' from Carros
+inner join Marcas on Marcas.Id = Carros.Marca
+where Marcas.UsuInc = 2
+order by 'Quantidade' asc
+9//
+select 
+sum (Valor * Quantidade) as 'Valor Total' 
+from Vendas 
+where year (DatInc) = 2019
+
+select 
+sum (Quantidade) as 'Total Vendas' 
+from Vendas 
+where year (DatInc) = 2019
+10//
+select
+sum (Valor * Quantidade) as 'Valor Total', year (DatInc) as 'Ano'
+from Vendas 
+group by year (DatInc)
+order by [Valor Total] desc
+
+select 
+sum (Quantidade) as 'Total Vendas' , year (DatInc) as 'Ano'
+from Vendas 
+group by year (DatInc) 
+order by [Total Vendas] desc 
+11//
+select
+sum (Valor * Quantidade) as 'Valor Total', CONCAT(month (DatInc),'/', YEAR (DatInc)) as 'Mês/Ano'
+from Vendas 
+group by CONCAT(month (DatInc),'/', YEAR (DatInc)) 
+order by [Valor Total] desc
+12//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
