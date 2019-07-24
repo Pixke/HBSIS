@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8310330B-CAC8-40F1-80D8-5441BE3D6494}</ProjectGuid>
+    <ProjectGuid>{DD978760-06D3-460F-AC77-19C35C0F8944}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Criação_de_Lista</RootNamespace>
-    <AssemblyName>Criação de Lista</AssemblyName>
+    <RootNamespace>Usando_A_Calculadora</RootNamespace>
+    <AssemblyName>Usando_A_Calculadora</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,12 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CriacaoDeLista_Classe\RelatorioLista.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjetoCalcular\Calculadora.csproj">
+      <Project>{b7e18431-e521-43d4-8753-0d2747944535}</Project>
+      <Name>Calculadora</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

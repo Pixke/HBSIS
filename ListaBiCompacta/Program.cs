@@ -1,24 +1,18 @@
-﻿using MeuCarro4x4CLass.MyFirstClass;
-using System;
+﻿using System;
+using ListaBiCompacta.BibliotecaListaBi;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MeuCarro4x4CLass
+namespace ListaBiSuperCompacta
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var teste = new Carro();
-
-            teste ++;
-
-            teste.Janelas = 0;
-
-            teste.MostrarCarro();
-
+            var listaBi = new ListaBi();
+            listaBi.PesquisaLista("0");
             Console.ReadKey();
         }
     }

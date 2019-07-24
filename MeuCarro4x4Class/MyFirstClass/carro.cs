@@ -12,6 +12,13 @@ namespace MeuCarro4x4CLass.MyFirstClass
         public int Portas { get; set; } = 0;
         public int Bancos { get; set; } = 0;
         public int Janelas { get; set; } = 0;
+
+        public static Carro operator ++(Carro carro)
+        {
+            Carro.Rodas = Carro.Rodas + 5;
+            return carro;
+        }
+
         public void MostrarCarro()
         {
             Console.WriteLine($"Nosso carro: \r\n" +

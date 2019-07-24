@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8310330B-CAC8-40F1-80D8-5441BE3D6494}</ProjectGuid>
+    <ProjectGuid>{C96F7834-6E6C-42DA-891B-6801F3A04FD3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Criação_de_Lista</RootNamespace>
-    <AssemblyName>Criação de Lista</AssemblyName>
+    <RootNamespace>UsandoNossaBibliotecaDeLista</RootNamespace>
+    <AssemblyName>UsandoNossaBibliotecaDeLista</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CriacaoDeLista_Classe\RelatorioLista.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

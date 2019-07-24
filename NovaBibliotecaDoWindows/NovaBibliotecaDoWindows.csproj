@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8310330B-CAC8-40F1-80D8-5441BE3D6494}</ProjectGuid>
+    <ProjectGuid>{6425105A-59B3-4BE6-BDB8-B67317656188}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Criação_de_Lista</RootNamespace>
-    <AssemblyName>Criação de Lista</AssemblyName>
+    <RootNamespace>NovaBibliotecaDoWindows</RootNamespace>
+    <AssemblyName>NovaBibliotecaDoWindows</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BibliotecaDeArquivosDoWindows, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\hbsis\Downloads\BibliotecaDeArquivosDoWindows.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,7 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CriacaoDeLista_Classe\RelatorioLista.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

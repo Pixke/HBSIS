@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Usando_A_Calculadora.Calculadora;
 
-namespace CriacaoDeLista_
+namespace Usando_A_Calculadora
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var lista = new Criação_de_Lista.RelatorioLista();
-            lista.Lista(Console.ReadLine());
+            var calc = new Calculator();
 
-            Console.ReadKey();
+            calc.Calc();
+
         }
     }
 }
