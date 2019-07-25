@@ -16,6 +16,7 @@ namespace InsertAndRemoveInList
             int IndiceBaseDeDados = 0;
             //Apresentação inicial do nosso sistema
             Console.WriteLine("Iniciando sistema de lista de nome e idade.");
+            Console.ReadKey();
             //Criamos a variavel fora para não ser criada novamente 
             var escolhaInicial = ApresentaMenuInicial();
             //Loop infinito ate que de uma treta
