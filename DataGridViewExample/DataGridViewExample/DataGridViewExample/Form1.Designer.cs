@@ -55,6 +55,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -73,6 +75,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(1, 44);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(1451, 400);
@@ -118,6 +121,7 @@
             this.modeloDataGridViewTextBoxColumn.HeaderText = "Modelo";
             this.modeloDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.modeloDataGridViewTextBoxColumn.Name = "modeloDataGridViewTextBoxColumn";
+            this.modeloDataGridViewTextBoxColumn.ReadOnly = true;
             this.modeloDataGridViewTextBoxColumn.Width = 150;
             // 
             // anoDataGridViewTextBoxColumn
@@ -126,6 +130,7 @@
             this.anoDataGridViewTextBoxColumn.HeaderText = "Ano";
             this.anoDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.anoDataGridViewTextBoxColumn.Name = "anoDataGridViewTextBoxColumn";
+            this.anoDataGridViewTextBoxColumn.ReadOnly = true;
             this.anoDataGridViewTextBoxColumn.Width = 150;
             // 
             // marcaDataGridViewTextBoxColumn
@@ -134,6 +139,7 @@
             this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
             this.marcaDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
+            this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
             this.marcaDataGridViewTextBoxColumn.Width = 150;
             // 
             // ativoDataGridViewCheckBoxColumn
@@ -142,6 +148,7 @@
             this.ativoDataGridViewCheckBoxColumn.HeaderText = "Ativo";
             this.ativoDataGridViewCheckBoxColumn.MinimumWidth = 8;
             this.ativoDataGridViewCheckBoxColumn.Name = "ativoDataGridViewCheckBoxColumn";
+            this.ativoDataGridViewCheckBoxColumn.ReadOnly = true;
             this.ativoDataGridViewCheckBoxColumn.Width = 150;
             // 
             // usuIncDataGridViewTextBoxColumn
@@ -150,6 +157,7 @@
             this.usuIncDataGridViewTextBoxColumn.HeaderText = "UsuInc";
             this.usuIncDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.usuIncDataGridViewTextBoxColumn.Name = "usuIncDataGridViewTextBoxColumn";
+            this.usuIncDataGridViewTextBoxColumn.ReadOnly = true;
             this.usuIncDataGridViewTextBoxColumn.Width = 150;
             // 
             // usuAltDataGridViewTextBoxColumn
@@ -158,6 +166,7 @@
             this.usuAltDataGridViewTextBoxColumn.HeaderText = "UsuAlt";
             this.usuAltDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.usuAltDataGridViewTextBoxColumn.Name = "usuAltDataGridViewTextBoxColumn";
+            this.usuAltDataGridViewTextBoxColumn.ReadOnly = true;
             this.usuAltDataGridViewTextBoxColumn.Width = 150;
             // 
             // datIncDataGridViewTextBoxColumn
@@ -166,6 +175,7 @@
             this.datIncDataGridViewTextBoxColumn.HeaderText = "DatInc";
             this.datIncDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.datIncDataGridViewTextBoxColumn.Name = "datIncDataGridViewTextBoxColumn";
+            this.datIncDataGridViewTextBoxColumn.ReadOnly = true;
             this.datIncDataGridViewTextBoxColumn.Width = 150;
             // 
             // datAltDataGridViewTextBoxColumn
@@ -174,6 +184,7 @@
             this.datAltDataGridViewTextBoxColumn.HeaderText = "DatAlt";
             this.datAltDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.datAltDataGridViewTextBoxColumn.Name = "datAltDataGridViewTextBoxColumn";
+            this.datAltDataGridViewTextBoxColumn.ReadOnly = true;
             this.datAltDataGridViewTextBoxColumn.Width = 150;
             // 
             // carrosBindingSource

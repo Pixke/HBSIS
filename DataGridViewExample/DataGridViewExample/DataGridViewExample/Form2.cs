@@ -1,4 +1,5 @@
-﻿using DataGridViewExample.Edicao;
+﻿using DataGridViewExample.Adicionar;
+using DataGridViewExample.Edicao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,9 +48,13 @@ namespace DataGridViewExample
             this.marcasTableAdapter.CustomQuery(this.querysInnerJoinDataSet.Marcas);
         }
 
-        private void Button2_Click(object sender, EventArgs e)
-        {
 
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            frmAdicionaMarca tela = new frmAdicionaMarca();
+            tela.ShowDialog();
+            this.marcasTableAdapter.Insert(tela.MarcasRow.Nome, true, 1, 1, DateTime.Now, DateTime.Now);
+            this.marcasTableAdapter.CustomQuery(this.querysInnerJoinDataSet.Marcas);
         }
     }
 }

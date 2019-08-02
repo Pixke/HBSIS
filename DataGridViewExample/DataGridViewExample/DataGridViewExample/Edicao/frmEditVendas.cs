@@ -12,14 +12,11 @@ namespace DataGridViewExample.Edicao
 {
     public partial class frmEditVendas : Form
     {
+        internal QuerysInnerJoinDataSet.VendasRow VendasRow;
+
         public frmEditVendas()
         {
             InitializeComponent();
-        }
-
-        private void Label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void FrmEditVendas_Load(object sender, EventArgs e)

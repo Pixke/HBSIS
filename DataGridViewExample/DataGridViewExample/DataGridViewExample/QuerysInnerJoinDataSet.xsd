@@ -501,7 +501,7 @@ SELECT Id, Carro, Quantidade, Valor, Ativo, UsuInc, UsuAlt, DatInc, DatAlt FROM 
               <xs:element name="DatInc" msprop:Generator_ColumnVarNameInTable="columnDatInc" msprop:Generator_ColumnPropNameInRow="DatInc" msprop:Generator_ColumnPropNameInTable="DatIncColumn" msprop:Generator_UserColumnName="DatInc" type="xs:dateTime" />
               <xs:element name="DatAlt" msprop:Generator_ColumnVarNameInTable="columnDatAlt" msprop:Generator_ColumnPropNameInRow="DatAlt" msprop:Generator_ColumnPropNameInTable="DatAltColumn" msprop:Generator_UserColumnName="DatAlt" type="xs:dateTime" />
               <xs:element name="DeletComand" msprop:Generator_ColumnVarNameInTable="columnDeletComand" msprop:Generator_ColumnPropNameInRow="DeletComand" msprop:Generator_ColumnPropNameInTable="DeletComandColumn" msprop:Generator_UserColumnName="DeletComand" type="xs:string" default="Delete" minOccurs="0" />
-              <xs:element name="RestoreComand" msprop:Generator_ColumnVarNameInTable="columnRestoreComand" msprop:Generator_ColumnPropNameInRow="RestoreComand" msprop:Generator_ColumnPropNameInTable="RestoreComandColumn" msprop:Generator_UserColumnName="RestoreComand" type="xs:string" default="Restaurar" minOccurs="0" />
+              <xs:element name="EditComand" msprop:Generator_ColumnVarNameInTable="columnEditComand" msprop:Generator_ColumnPropNameInRow="EditComand" msprop:Generator_ColumnPropNameInTable="EditComandColumn" msprop:Generator_UserColumnName="EditComand" type="xs:string" default="Editar" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -537,6 +537,8 @@ SELECT Id, Carro, Quantidade, Valor, Ativo, UsuInc, UsuAlt, DatInc, DatAlt FROM 
               <xs:element name="DatInc" msprop:Generator_ColumnVarNameInTable="columnDatInc" msprop:Generator_ColumnPropNameInRow="DatInc" msprop:Generator_ColumnPropNameInTable="DatIncColumn" msprop:Generator_UserColumnName="DatInc" type="xs:dateTime" />
               <xs:element name="DatAlt" msprop:Generator_ColumnVarNameInTable="columnDatAlt" msprop:Generator_ColumnPropNameInRow="DatAlt" msprop:Generator_ColumnPropNameInTable="DatAltColumn" msprop:Generator_UserColumnName="DatAlt" type="xs:dateTime" />
               <xs:element name="DeletCommand" msprop:Generator_ColumnVarNameInTable="columnDeletCommand" msprop:Generator_ColumnPropNameInRow="DeletCommand" msprop:Generator_ColumnPropNameInTable="DeletCommandColumn" msprop:Generator_UserColumnName="DeletCommand" type="xs:string" default="Delete" minOccurs="0" />
+              <xs:element name="RestoreCommand" msprop:Generator_ColumnVarNameInTable="columnRestoreCommand" msprop:Generator_ColumnPropNameInRow="RestoreCommand" msprop:Generator_ColumnPropNameInTable="RestoreCommandColumn" msprop:Generator_UserColumnName="RestoreCommand" type="xs:string" default="Restaurar" minOccurs="0" />
+              <xs:element name="EditCommand" msprop:Generator_ColumnVarNameInTable="columnEditCommand" msprop:Generator_ColumnPropNameInRow="EditCommand" msprop:Generator_ColumnPropNameInTable="EditCommandColumn" msprop:Generator_UserColumnName="EditCommand" type="xs:string" default="Editar" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

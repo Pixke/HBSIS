@@ -92,6 +92,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Adicionar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // marcasTableAdapter
             // 
@@ -108,11 +109,13 @@
             // 
             // EditCommand
             // 
-            this.EditCommand.DataPropertyName = "Id";
+            this.EditCommand.DataPropertyName = "EditComand";
             this.EditCommand.HeaderText = "Editar";
             this.EditCommand.MinimumWidth = 6;
             this.EditCommand.Name = "EditCommand";
             this.EditCommand.ReadOnly = true;
+            this.EditCommand.Text = "Editar";
+            this.EditCommand.UseColumnTextForButtonValue = true;
             this.EditCommand.Width = 125;
             // 
             // idDataGridViewTextBoxColumn

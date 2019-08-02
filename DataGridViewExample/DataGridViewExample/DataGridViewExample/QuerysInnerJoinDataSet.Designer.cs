@@ -815,7 +815,7 @@ namespace DataGridViewExample {
             
             private global::System.Data.DataColumn columnDeletComand;
             
-            private global::System.Data.DataColumn columnRestoreComand;
+            private global::System.Data.DataColumn columnEditComand;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -916,9 +916,9 @@ namespace DataGridViewExample {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn RestoreComandColumn {
+            public global::System.Data.DataColumn EditComandColumn {
                 get {
-                    return this.columnRestoreComand;
+                    return this.columnEditComand;
                 }
             }
             
@@ -959,7 +959,7 @@ namespace DataGridViewExample {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public MarcasRow AddMarcasRow(string Nome, bool Ativo, int UsuInc, int UsuAlt, System.DateTime DatInc, System.DateTime DatAlt, string DeletComand, string RestoreComand) {
+            public MarcasRow AddMarcasRow(string Nome, bool Ativo, int UsuInc, int UsuAlt, System.DateTime DatInc, System.DateTime DatAlt, string DeletComand, string EditComand) {
                 MarcasRow rowMarcasRow = ((MarcasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -970,7 +970,7 @@ namespace DataGridViewExample {
                         DatInc,
                         DatAlt,
                         DeletComand,
-                        RestoreComand};
+                        EditComand};
                 rowMarcasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowMarcasRow);
                 return rowMarcasRow;
@@ -1008,7 +1008,7 @@ namespace DataGridViewExample {
                 this.columnDatInc = base.Columns["DatInc"];
                 this.columnDatAlt = base.Columns["DatAlt"];
                 this.columnDeletComand = base.Columns["DeletComand"];
-                this.columnRestoreComand = base.Columns["RestoreComand"];
+                this.columnEditComand = base.Columns["EditComand"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1030,8 +1030,8 @@ namespace DataGridViewExample {
                 base.Columns.Add(this.columnDatAlt);
                 this.columnDeletComand = new global::System.Data.DataColumn("DeletComand", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDeletComand);
-                this.columnRestoreComand = new global::System.Data.DataColumn("RestoreComand", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRestoreComand);
+                this.columnEditComand = new global::System.Data.DataColumn("EditComand", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEditComand);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -1048,7 +1048,7 @@ namespace DataGridViewExample {
                 this.columnDatInc.AllowDBNull = false;
                 this.columnDatAlt.AllowDBNull = false;
                 this.columnDeletComand.DefaultValue = ((string)("Delete"));
-                this.columnRestoreComand.DefaultValue = ((string)("Restaurar"));
+                this.columnEditComand.DefaultValue = ((string)("Editar"));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1555,6 +1555,10 @@ namespace DataGridViewExample {
             
             private global::System.Data.DataColumn columnDeletCommand;
             
+            private global::System.Data.DataColumn columnRestoreCommand;
+            
+            private global::System.Data.DataColumn columnEditCommand;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public VendasDataTable() {
@@ -1670,6 +1674,22 @@ namespace DataGridViewExample {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn RestoreCommandColumn {
+                get {
+                    return this.columnRestoreCommand;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EditCommandColumn {
+                get {
+                    return this.columnEditCommand;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1705,7 +1725,7 @@ namespace DataGridViewExample {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public VendasRow AddVendasRow(CarrosRow parentCarrosRowByFK_Vendas_Carros, int Quantidade, decimal Valor, bool Ativo, int UsuInc, int UsuAlt, System.DateTime DatInc, System.DateTime DatAlt, string DeletCommand) {
+            public VendasRow AddVendasRow(CarrosRow parentCarrosRowByFK_Vendas_Carros, int Quantidade, decimal Valor, bool Ativo, int UsuInc, int UsuAlt, System.DateTime DatInc, System.DateTime DatAlt, string DeletCommand, string RestoreCommand, string EditCommand) {
                 VendasRow rowVendasRow = ((VendasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1717,7 +1737,9 @@ namespace DataGridViewExample {
                         UsuAlt,
                         DatInc,
                         DatAlt,
-                        DeletCommand};
+                        DeletCommand,
+                        RestoreCommand,
+                        EditCommand};
                 if ((parentCarrosRowByFK_Vendas_Carros != null)) {
                     columnValuesArray[1] = parentCarrosRowByFK_Vendas_Carros[0];
                 }
@@ -1760,6 +1782,8 @@ namespace DataGridViewExample {
                 this.columnDatInc = base.Columns["DatInc"];
                 this.columnDatAlt = base.Columns["DatAlt"];
                 this.columnDeletCommand = base.Columns["DeletCommand"];
+                this.columnRestoreCommand = base.Columns["RestoreCommand"];
+                this.columnEditCommand = base.Columns["EditCommand"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1785,6 +1809,10 @@ namespace DataGridViewExample {
                 base.Columns.Add(this.columnDatAlt);
                 this.columnDeletCommand = new global::System.Data.DataColumn("DeletCommand", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDeletCommand);
+                this.columnRestoreCommand = new global::System.Data.DataColumn("RestoreCommand", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRestoreCommand);
+                this.columnEditCommand = new global::System.Data.DataColumn("EditCommand", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEditCommand);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -1802,6 +1830,8 @@ namespace DataGridViewExample {
                 this.columnDatInc.AllowDBNull = false;
                 this.columnDatAlt.AllowDBNull = false;
                 this.columnDeletCommand.DefaultValue = ((string)("Delete"));
+                this.columnRestoreCommand.DefaultValue = ((string)("Restaurar"));
+                this.columnEditCommand.DefaultValue = ((string)("Editar"));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2201,17 +2231,17 @@ namespace DataGridViewExample {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string RestoreComand {
+            public string EditComand {
                 get {
                     try {
-                        return ((string)(this[this.tableMarcas.RestoreComandColumn]));
+                        return ((string)(this[this.tableMarcas.EditComandColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RestoreComand\' in table \'Marcas\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EditComand\' in table \'Marcas\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableMarcas.RestoreComandColumn] = value;
+                    this[this.tableMarcas.EditComandColumn] = value;
                 }
             }
             
@@ -2229,14 +2259,14 @@ namespace DataGridViewExample {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsRestoreComandNull() {
-                return this.IsNull(this.tableMarcas.RestoreComandColumn);
+            public bool IsEditComandNull() {
+                return this.IsNull(this.tableMarcas.EditComandColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetRestoreComandNull() {
-                this[this.tableMarcas.RestoreComandColumn] = global::System.Convert.DBNull;
+            public void SetEditComandNull() {
+                this[this.tableMarcas.EditComandColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2474,6 +2504,38 @@ namespace DataGridViewExample {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string RestoreCommand {
+                get {
+                    try {
+                        return ((string)(this[this.tableVendas.RestoreCommandColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RestoreCommand\' in table \'Vendas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVendas.RestoreCommandColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string EditCommand {
+                get {
+                    try {
+                        return ((string)(this[this.tableVendas.EditCommandColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EditCommand\' in table \'Vendas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVendas.EditCommandColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public CarrosRow CarrosRow {
                 get {
                     return ((CarrosRow)(this.GetParentRow(this.Table.ParentRelations["FK_Vendas_Carros"])));
@@ -2493,6 +2555,30 @@ namespace DataGridViewExample {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDeletCommandNull() {
                 this[this.tableVendas.DeletCommandColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRestoreCommandNull() {
+                return this.IsNull(this.tableVendas.RestoreCommandColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRestoreCommandNull() {
+                this[this.tableVendas.RestoreCommandColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEditCommandNull() {
+                return this.IsNull(this.tableVendas.EditCommandColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEditCommandNull() {
+                this[this.tableVendas.EditCommandColumn] = global::System.Convert.DBNull;
             }
         }
         
