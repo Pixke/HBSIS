@@ -35,26 +35,29 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(73, 14);
+            this.textBox1.Location = new System.Drawing.Point(55, 11);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(443, 22);
+            this.textBox1.Size = new System.Drawing.Size(332, 20);
             this.textBox1.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.Location = new System.Drawing.Point(9, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 17);
+            this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Marca:";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(15, 65);
+            this.button1.Location = new System.Drawing.Point(11, 53);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(501, 110);
+            this.button1.Size = new System.Drawing.Size(376, 89);
             this.button1.TabIndex = 6;
             this.button1.Text = "Salvar";
             this.button1.UseVisualStyleBackColor = true;
@@ -62,12 +65,13 @@
             // 
             // frmAdicionaMarca
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 187);
+            this.ClientSize = new System.Drawing.Size(399, 152);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmAdicionaMarca";
             this.Text = "frmAdicionaMarca";
             this.Load += new System.EventHandler(this.FrmAdicionaMarca_Load);

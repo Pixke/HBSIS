@@ -30,7 +30,7 @@ namespace MVCProject.View
         {
             var userSelect = ((System.Data.DataRowView)
             this.dataGridView1.Rows[e.RowIndex].DataBoundItem).Row as
-            MVCProject.sistemaBibliotecaHBSISDataSet.usuarioRom;
+            MVCProject.sistemaBibliotecaHBSISDataSet.Usuario;
             
             switch (e.ColumnIndex)
             {

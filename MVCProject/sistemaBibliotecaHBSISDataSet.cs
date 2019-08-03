@@ -2,5 +2,8 @@
 {
     internal class sistemaBibliotecaHBSISDataSet
     {
+        internal class usuarioRom
+        {
+        }
     }
 }

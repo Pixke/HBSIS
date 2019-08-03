@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCProject.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +18,6 @@ namespace MVCProject.Editar
             InitializeComponent();
         }
 
+        public Usuario usuarioRom;
     }
 }
