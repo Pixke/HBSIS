@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCProject.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,15 +28,5 @@ namespace MVCProject.Editar
             textBox3.Text = UsuarioRom.Senha;
             textBox4.Text = UsuarioRom._E_mail;
 
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            UsuarioRom.Login = textBox2.Text;
-            UsuarioRom.Senha = textBox3.Text;
-            UsuarioRom._E_mail = textBox4.Text;
-
-            this.Close();
-        }
     }
 }
