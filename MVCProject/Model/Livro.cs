@@ -8,9 +8,10 @@ namespace MVCProject.Model
 {
     public class Livro : Informacao
     {
+
         public int Id { get; set; }
         public int Registro { get; set; }
-        public int Titulo { get; set; }
+        public string Titulo { get; set; }
         public string Isbn { get; set; }
         public int Genero { get; set; }
         public int Editora { get; set; }

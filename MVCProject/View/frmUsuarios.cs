@@ -22,7 +22,7 @@ namespace MVCProject.View
         private void FrmUsuarios_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'sistemaBibliotecaHBSISDataSet.Usuario' table. You can move, or remove it, as needed.
-            this.usuarioTableAdapter.Fill(this.sistemaBibliotecaHBSISDataSet.Usuario);
+            this.usuarioTableAdapter.CustomQuery(this.sistemaBibliotecaHBSISDataSet.Usuario);
 
         }
 
@@ -30,15 +30,15 @@ namespace MVCProject.View
         {
             var userSelect = ((System.Data.DataRowView)
             this.dataGridView1.Rows[e.RowIndex].DataBoundItem).Row as
-            MVCProject.sistemaBibliotecaHBSISDataSet.usuarioRom;
+            MVCProject.SistemaBibliotecaHBSISDataSet.UsuarioRow;
             
             switch (e.ColumnIndex)
             {
-                case 0: { this.usuarioTableAdapter.DeleteQuery(userSelect.Id); } break;
-                case 1:
+                case 1: { this.usuarioTableAdapter.DeleteQuery(userSelect.Id); } break;
+                case 0:
                     {
                         frmEditUsuario editUser = new frmEditUsuario();
-                        editUser.usuarioRom = userSelect;
+                        editUser.UsuarioRom = userSelect;
                         editUser.ShowDialog();
             
                         this.usuarioTableAdapter.Update(userSelect);
@@ -69,7 +69,7 @@ namespace MVCProject.View
                 DateTime.Now
                 );
 
-            this.usuarioTableAdapter.Fill(this.sistemaBibliotecaHBSISDataSet.Usuario);
+            this.usuarioTableAdapter.CustomQuery(this.sistemaBibliotecaHBSISDataSet.Usuario);
         }
     }
 }

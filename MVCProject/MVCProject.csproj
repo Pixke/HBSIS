@@ -46,13 +46,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adicionar\frmAddAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicionar\frmAddAutor.Designer.cs">
+      <DependentUpon>frmAddAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adicionar\frmAddEditora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicionar\frmAddEditora.Designer.cs">
+      <DependentUpon>frmAddEditora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adicionar\frmAddGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicionar\frmAddGenero.Designer.cs">
+      <DependentUpon>frmAddGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adicionar\frmAddLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicionar\frmAddLivro.Designer.cs">
+      <DependentUpon>frmAddLivro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Adicionar\frmAddUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Adicionar\frmAddUsuario.Designer.cs">
       <DependentUpon>frmAddUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataGridViewExample\sistemaBibliotecaHBSISDataSet.cs" />
+    <Compile Include="Editar\frmEditAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar\frmEditAutor.Designer.cs">
+      <DependentUpon>frmEditAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar\frmEditEditora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar\frmEditEditora.Designer.cs">
+      <DependentUpon>frmEditEditora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar\frmEditGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar\frmEditGenero.Designer.cs">
+      <DependentUpon>frmEditGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar\frmEditLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar\frmEditLivro.Designer.cs">
+      <DependentUpon>frmEditLivro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Editar\frmEditUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,13 +122,34 @@
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sistemaBibliotecaHBSISDataSet.cs">
-      <DependentUpon>SistemaBibliotecaHBSISDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="SistemaBibliotecaHBSISDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SistemaBibliotecaHBSISDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmAutor.Designer.cs">
+      <DependentUpon>frmAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmEditora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmEditora.Designer.cs">
+      <DependentUpon>frmEditora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmGenero.Designer.cs">
+      <DependentUpon>frmGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmLivro.Designer.cs">
+      <DependentUpon>frmLivro.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -95,8 +163,32 @@
     <Compile Include="View\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Adicionar\frmAddAutor.resx">
+      <DependentUpon>frmAddAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adicionar\frmAddEditora.resx">
+      <DependentUpon>frmAddEditora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adicionar\frmAddGenero.resx">
+      <DependentUpon>frmAddGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adicionar\frmAddLivro.resx">
+      <DependentUpon>frmAddLivro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Adicionar\frmAddUsuario.resx">
       <DependentUpon>frmAddUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar\frmEditAutor.resx">
+      <DependentUpon>frmEditAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar\frmEditEditora.resx">
+      <DependentUpon>frmEditEditora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar\frmEditGenero.resx">
+      <DependentUpon>frmEditGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar\frmEditLivro.resx">
+      <DependentUpon>frmEditLivro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editar\frmEditUsuario.resx">
       <DependentUpon>frmEditUsuario.cs</DependentUpon>
@@ -113,6 +205,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmAutor.resx">
+      <DependentUpon>frmAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmEditora.resx">
+      <DependentUpon>frmEditora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmGenero.resx">
+      <DependentUpon>frmGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmLivro.resx">
+      <DependentUpon>frmLivro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>

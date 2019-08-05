@@ -57,7 +57,16 @@ SELECT Id, Nome, Descricao FROM Autores WHERE (Id = @Id)</CommandText>
               <Mapping SourceColumn="Nome" DataSetColumn="Nome" />
               <Mapping SourceColumn="Descricao" DataSetColumn="Descricao" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="SistemaBibliotecaHBSISConnectionString (Settings)" DbObjectName="SistemaBibliotecaHBSIS.dbo.Autores" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="CustomQuery" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="CustomQuery" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="CustomQuery">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Id, Nome, Descricao FROM dbo.Autores </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EditoraTableAdapter" GeneratorDataComponentClassName="EditoraTableAdapter" Name="Editora" UserDataComponentName="EditoraTableAdapter">
             <MainSource>
@@ -111,7 +120,16 @@ SELECT Id, Nome, Descricao FROM Editora WHERE (Id = @Id)</CommandText>
               <Mapping SourceColumn="Nome" DataSetColumn="Nome" />
               <Mapping SourceColumn="Descricao" DataSetColumn="Descricao" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="SistemaBibliotecaHBSISConnectionString (Settings)" DbObjectName="SistemaBibliotecaHBSIS.dbo.Editora" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="CustomQuery" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="CustomQuery" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="CustomQuery">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Id, Nome, Descricao FROM dbo.Editora</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GenerosTableAdapter" GeneratorDataComponentClassName="GenerosTableAdapter" Name="Generos" UserDataComponentName="GenerosTableAdapter">
             <MainSource>
@@ -168,7 +186,16 @@ SELECT Id, Titulo, Tipo, Descricao FROM Generos WHERE (Id = @Id)</CommandText>
               <Mapping SourceColumn="Tipo" DataSetColumn="Tipo" />
               <Mapping SourceColumn="Descricao" DataSetColumn="Descricao" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="SistemaBibliotecaHBSISConnectionString (Settings)" DbObjectName="SistemaBibliotecaHBSIS.dbo.Generos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="CustomQuery" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="CustomQuery" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="CustomQuery">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Id, Titulo, Tipo, Descricao FROM dbo.Generos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LivroAutorTableAdapter" GeneratorDataComponentClassName="LivroAutorTableAdapter" Name="LivroAutor" UserDataComponentName="LivroAutorTableAdapter">
             <MainSource>
@@ -325,7 +352,16 @@ SELECT Id, Registro, Titulo, ISBN, Genero, Editora, Sinopse, Observacoes, Ativo,
               <Mapping SourceColumn="DatInc" DataSetColumn="DatInc" />
               <Mapping SourceColumn="DatAlt" DataSetColumn="DatAlt" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="SistemaBibliotecaHBSISConnectionString (Settings)" DbObjectName="SistemaBibliotecaHBSIS.dbo.Livros" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="CustomQuery" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="CustomQuery" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="CustomQuery">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Id, Registro, Titulo, ISBN, Genero, Editora, Sinopse, Observacoes, Ativo, UsuInc, UsuAlt, DatInc, DatAlt FROM dbo.Livros</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LocacaoTableAdapter" GeneratorDataComponentClassName="LocacaoTableAdapter" Name="Locacao" UserDataComponentName="LocacaoTableAdapter">
             <MainSource>
@@ -712,6 +748,7 @@ SELECT Id, Nome, Login, Senha, [E-mail], Ativo, UsuInc, UsuAlt, DatInc, DatAlt F
               <xs:element name="DatInc" msprop:Generator_ColumnVarNameInTable="columnDatInc" msprop:Generator_ColumnPropNameInRow="DatInc" msprop:Generator_ColumnPropNameInTable="DatIncColumn" msprop:Generator_UserColumnName="DatInc" type="xs:dateTime" />
               <xs:element name="DatAlt" msprop:Generator_ColumnVarNameInTable="columnDatAlt" msprop:Generator_ColumnPropNameInRow="DatAlt" msprop:Generator_ColumnPropNameInTable="DatAltColumn" msprop:Generator_UserColumnName="DatAlt" type="xs:dateTime" />
               <xs:element name="DeleteCommand" msprop:Generator_ColumnVarNameInTable="columnDeleteCommand" msprop:Generator_ColumnPropNameInRow="DeleteCommand" msprop:Generator_ColumnPropNameInTable="DeleteCommandColumn" msprop:Generator_UserColumnName="DeleteCommand" type="xs:string" default="Delete" minOccurs="0" />
+              <xs:element name="Editar" msprop:Generator_ColumnVarNameInTable="columnEditar" msprop:Generator_ColumnPropNameInRow="Editar" msprop:Generator_ColumnPropNameInTable="EditarColumn" msprop:Generator_UserColumnName="Editar" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

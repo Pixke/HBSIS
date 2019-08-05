@@ -75,18 +75,21 @@
             this.autorToolStripMenuItem.Name = "autorToolStripMenuItem";
             this.autorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.autorToolStripMenuItem.Text = "Autores";
+            this.autorToolStripMenuItem.Click += new System.EventHandler(this.AutorToolStripMenuItem_Click);
             // 
             // generosToolStripMenuItem
             // 
             this.generosToolStripMenuItem.Name = "generosToolStripMenuItem";
             this.generosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.generosToolStripMenuItem.Text = "Gêneros";
+            this.generosToolStripMenuItem.Click += new System.EventHandler(this.GenerosToolStripMenuItem_Click);
             // 
             // livrosToolStripMenuItem
             // 
             this.livrosToolStripMenuItem.Name = "livrosToolStripMenuItem";
             this.livrosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.livrosToolStripMenuItem.Text = "Livros";
+            this.livrosToolStripMenuItem.Click += new System.EventHandler(this.LivrosToolStripMenuItem_Click);
             // 
             // locação3ToolStripMenuItem
             // 
@@ -99,6 +102,7 @@
             this.editorasToolStripMenuItem.Name = "editorasToolStripMenuItem";
             this.editorasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.editorasToolStripMenuItem.Text = "Editoras";
+            this.editorasToolStripMenuItem.Click += new System.EventHandler(this.EditorasToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
