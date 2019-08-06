@@ -47,5 +47,11 @@ namespace MVCProject.View
             frmLivro tela = new frmLivro();
             tela.ShowDialog();
         }
+
+        private void Locação3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLocacao tela = new frmLocacao();
+            tela.ShowDialog();
+        }
     }
 }

@@ -22,7 +22,7 @@ namespace MVCProject.View
         private void FrmLivro_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'sistemaBibliotecaHBSISDataSet.Livros' table. You can move, or remove it, as needed.
-            this.livrosTableAdapter.CustomQuery(this.sistemaBibliotecaHBSISDataSet.Livros);
+            this.livrosTableAdapter.FillBy(this.sistemaBibliotecaHBSISDataSet.Livros);
 
         }
 
@@ -46,7 +46,7 @@ namespace MVCProject.View
                 DateTime.Now
                 );
 
-            this.livrosTableAdapter.CustomQuery(this.sistemaBibliotecaHBSISDataSet.Livros);
+            this.livrosTableAdapter.FillBy(this.sistemaBibliotecaHBSISDataSet.Livros);
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -72,7 +72,7 @@ namespace MVCProject.View
             }
 
 
-            this.livrosTableAdapter.CustomQuery(this.sistemaBibliotecaHBSISDataSet.Livros);
+            this.livrosTableAdapter.FillBy(this.sistemaBibliotecaHBSISDataSet.Livros);
         }
     }
 }

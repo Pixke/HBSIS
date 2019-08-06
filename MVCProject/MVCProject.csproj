@@ -70,6 +70,12 @@
     <Compile Include="Adicionar\frmAddLivro.Designer.cs">
       <DependentUpon>frmAddLivro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Adicionar\frmAddLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicionar\frmAddLocacao.Designer.cs">
+      <DependentUpon>frmAddLocacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Adicionar\frmAddUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,12 @@
     <Compile Include="View\frmLivro.Designer.cs">
       <DependentUpon>frmLivro.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmLocacao.Designer.cs">
+      <DependentUpon>frmLocacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Adicionar\frmAddLivro.resx">
       <DependentUpon>frmAddLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adicionar\frmAddLocacao.resx">
+      <DependentUpon>frmAddLocacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Adicionar\frmAddUsuario.resx">
       <DependentUpon>frmAddUsuario.cs</DependentUpon>
@@ -216,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmLivro.resx">
       <DependentUpon>frmLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmLocacao.resx">
+      <DependentUpon>frmLocacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>

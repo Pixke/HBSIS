@@ -96,6 +96,7 @@
             this.locação3ToolStripMenuItem.Name = "locação3ToolStripMenuItem";
             this.locação3ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.locação3ToolStripMenuItem.Text = "Locaçãos";
+            this.locação3ToolStripMenuItem.Click += new System.EventHandler(this.Locação3ToolStripMenuItem_Click);
             // 
             // editorasToolStripMenuItem
             // 

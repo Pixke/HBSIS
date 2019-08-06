@@ -15,16 +15,29 @@ namespace MVCProject
     public partial class Form1 : Form
     {
         public Form1()
+
         {
             InitializeComponent();
-
-
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            frmPrincipal tela = new frmPrincipal();
-            tela.ShowDialog();
+            //var result = this.usuarioTableAdapter.LoginQuery(textBox1.Text, textBox2.Text);
+            //
+            //if (result != null)
+            //{
+            //    Session.user = new Usuario
+            //    {
+            //        Id = (int)result
+            //    };
+            //
+            //    frmPrincipal frm = new frmPrincipal();
+            //    frm.ShowDialog();
+            //}
+            //else
+            //{
+            //    throw new Exception("Nome de Usuario ou Senha Invalido.");
+            //}
         }
     }
 }

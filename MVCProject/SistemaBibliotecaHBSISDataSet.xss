@@ -7,15 +7,15 @@
 <DiagramLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ex:showrelationlabel="False" ViewPortX="-10" ViewPortY="-47" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:Autores" ZOrder="17" X="661" Y="70" Height="181" Width="222" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
-    <Shape ID="DesignTable:Editora" ZOrder="1" X="348" Y="321" Height="181" Width="233" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
+    <Shape ID="DesignTable:Editora" ZOrder="2" X="348" Y="321" Height="181" Width="233" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
     <Shape ID="DesignTable:Generos" ZOrder="16" X="348" Y="549" Height="204" Width="228" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
     <Shape ID="DesignTable:LivroAutor" ZOrder="15" X="348" Y="70" Height="158" Width="243" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
-    <Shape ID="DesignTable:Livros" ZOrder="14" X="70" Y="70" Height="388" Width="228" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="306" />
-    <Shape ID="DesignTable:Locacao" ZOrder="13" X="348" Y="1304" Height="319" Width="223" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="260" />
-    <Shape ID="DesignTable:Usuario" ZOrder="12" X="348" Y="800" Height="434" Width="280" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="306" />
+    <Shape ID="DesignTable:Livros" ZOrder="1" X="70" Y="70" Height="411" Width="208" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="306" />
+    <Shape ID="DesignTable:Locacao" ZOrder="14" X="348" Y="1304" Height="319" Width="223" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="260" />
+    <Shape ID="DesignTable:Usuario" ZOrder="13" X="348" Y="800" Height="434" Width="280" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="306" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:FK_LivroAutor_Autores" ZOrder="11" LineWidth="11">
+    <Connector ID="DesignRelation:FK_LivroAutor_Autores" ZOrder="12" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>661</X>
@@ -27,10 +27,10 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_LivroAutor_Livros" ZOrder="10" LineWidth="11">
+    <Connector ID="DesignRelation:FK_LivroAutor_Livros" ZOrder="11" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>298</X>
+          <X>278</X>
           <Y>149</Y>
         </Point>
         <Point>
@@ -39,19 +39,19 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Livros_To_Editora" ZOrder="9" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Livros_To_Editora" ZOrder="10" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>348</X>
           <Y>378</Y>
         </Point>
         <Point>
-          <X>298</X>
+          <X>278</X>
           <Y>378</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Livros_To_Genero" ZOrder="8" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Livros_To_Genero" ZOrder="9" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>348</X>
@@ -63,11 +63,11 @@
         </Point>
         <Point>
           <X>261</X>
-          <Y>458</Y>
+          <Y>481</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Livros_To_UsuarioAlt" ZOrder="7" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Livros_To_UsuarioAlt" ZOrder="8" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>348</X>
@@ -79,11 +79,11 @@
         </Point>
         <Point>
           <X>253</X>
-          <Y>458</Y>
+          <Y>481</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Livros_To_UsuarioInc" ZOrder="6" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Livros_To_UsuarioInc" ZOrder="7" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>348</X>
@@ -95,15 +95,15 @@
         </Point>
         <Point>
           <X>245</X>
-          <Y>458</Y>
+          <Y>481</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Locacao_Livros" ZOrder="5" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Locacao_Livros" ZOrder="6" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>237</X>
-          <Y>458</Y>
+          <Y>481</Y>
         </Point>
         <Point>
           <X>237</X>
@@ -115,7 +115,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Locacao_LocacaoUsuAlt" ZOrder="4" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Locacao_LocacaoUsuAlt" ZOrder="5" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>451</X>
@@ -127,7 +127,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Locacao_LocacaoUsuInc" ZOrder="3" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Locacao_LocacaoUsuInc" ZOrder="4" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>459</X>
@@ -139,7 +139,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Locacao_UsuarioAloc" ZOrder="2" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Locacao_UsuarioAloc" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>443</X>

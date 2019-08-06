@@ -18,7 +18,7 @@ namespace MVCProject.Editar
             InitializeComponent();
         }
         public MVCProject.SistemaBibliotecaHBSISDataSet.UsuarioRow UsuarioRom;
-        
+
         private void FrmEditUsuario_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'sistemaBibliotecaHBSISDataSet.Usuario' table. You can move, or remove it, as needed.
@@ -28,5 +28,6 @@ namespace MVCProject.Editar
             textBox3.Text = UsuarioRom.Senha;
             textBox4.Text = UsuarioRom._E_mail;
 
+        }
     }
 }
