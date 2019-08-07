@@ -58,6 +58,12 @@
     <Compile Include="Views\ucLogin.xaml.cs">
       <DependentUpon>ucLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ucSuperCal.xaml.cs">
+      <DependentUpon>ucSuperCal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ucTaskBar.xaml.cs">
+      <DependentUpon>ucTaskBar.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,6 +77,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\ucLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ucSuperCal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ucTaskBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

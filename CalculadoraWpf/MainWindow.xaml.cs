@@ -24,5 +24,16 @@ namespace CalculadoraWpf
         {
             InitializeComponent();
         }
+
+        private void UcLoginForm_loginCorrect(object sender, EventArgs e)
+        {
+            ucTaskForm.Visibility = Visibility.Visible;
+        }
+
+        private void UcTaskForm_superatomica(object sender, EventArgs e)
+        {
+            ucTaskForm.Visibility = Visibility.Hidden;
+            ucSuperForm.Visibility = Visibility.Visible;
+        }
     }
 }
