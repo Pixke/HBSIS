@@ -20,8 +20,8 @@
         <TextBox x:Name="Resultado" Margin="0,0,364,152" TextWrapping="Wrap" Text="" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="295"/>
         <Button Content="SUPER ATÔMICA&#xD;&#xA;" 
                 HorizontalAlignment="Left" 
-                Margin="491,80,0,0" 
-                VerticalAlignment="Top" Width="283" Height="311" 
+                Margin="441,10,0,0" 
+                VerticalAlignment="Top" Width="349" Height="152" 
                 FontFamily="Arial Black" FontSize="29" 
                 FontWeight="Bold" FontStyle="Italic" 
                 Click="Button_Click">
@@ -33,15 +33,8 @@
             </Button.BorderBrush>
             <Button.Background>
                 <RadialGradientBrush>
-                    <GradientStop Color="#FF040903" Offset="1"/>
-                    <GradientStop Color="#FF41B017"/>
-                    <GradientStop Color="#FF123107" Offset="0.766"/>
-                    <GradientStop Color="#FF0D2205" Offset="1"/>
-                    <GradientStop Color="#FF184209" Offset="0.831"/>
-                    <GradientStop Color="#FF112F06" Offset="0.956"/>
+                    <GradientStop Color="#FF41B017" Offset="1"/>
                     <GradientStop Color="#FF102D05" Offset="1"/>
-                    <GradientStop Color="#FF0D2305" Offset="0.998"/>
-                    <GradientStop Color="#FF1F550B" Offset="1"/>
                 </RadialGradientBrush>
             </Button.Background>
         </Button>

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{27B23182-8BE8-4C97-BBF9-B8FBEAE9930C}</ProjectGuid>
+    <ProjectGuid>{6F9C431C-70E1-4814-8224-C21980E6ACDC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CalculadoraWpf</RootNamespace>
-    <AssemblyName>CalculadoraWpf</AssemblyName>
+    <RootNamespace>CadastroWPF</RootNamespace>
+    <AssemblyName>CadastroWPF</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,18 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Views\ucCadastro.xaml.cs">
-      <DependentUpon>ucCadastro.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ucLogin.xaml.cs">
-      <DependentUpon>ucLogin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ucSuperCal.xaml.cs">
-      <DependentUpon>ucSuperCal.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ucTaskBar.xaml.cs">
-      <DependentUpon>ucTaskBar.xaml</DependentUpon>
-    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -79,22 +67,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\ucCadastro.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ucLogin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ucSuperCal.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ucTaskBar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

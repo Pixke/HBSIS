@@ -14,5 +14,6 @@
 
         <y:ucTaskBar x:Name="ucTaskForm" Visibility="Hidden"  superatomica="UcTaskForm_superatomica"></y:ucTaskBar>
         <y:ucSuperCal x:Name="ucSuperForm" Visibility="Hidden"></y:ucSuperCal>
+        
     </Grid>
 </Window>

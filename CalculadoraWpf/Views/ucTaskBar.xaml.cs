@@ -58,5 +58,7 @@ namespace CalculadoraWpf.Views
         {
             superatomica(null, new EventArgs());
         }
+
+
     }
 }
