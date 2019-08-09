@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfAppEntity.Views.frmEditUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppEntity.Views"
+        mc:Ignorable="d"
+        Title="frmEditUser" Height="200" Width="300">
+    <Grid>
+        <TextBox x:Name="tbxNome" HorizontalAlignment="Left" Height="26" Margin="61,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208"/>
+        <TextBox x:Name="tbxLogin" HorizontalAlignment="Left" Height="26" Margin="61,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208"/>
+        <TextBox x:Name="tbxSenha" HorizontalAlignment="Left" Height="26" Margin="61,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208"/>
+        <Label Content="Nome" HorizontalAlignment="Left" Margin="14,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Login" HorizontalAlignment="Left" Margin="12,41,0,0" VerticalAlignment="Top"/>
+        <Label Content="Senha" HorizontalAlignment="Left" Margin="14,72,0,0" VerticalAlignment="Top"/>
+        <Button Click="Button_Click" Content="SALVAR" 
+                HorizontalAlignment="Left" 
+                Margin="61,103,0,0" 
+                VerticalAlignment="Top" 
+                Width="208" 
+                Height="34"/>
+
+    </Grid>
+</Window>
