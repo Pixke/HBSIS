@@ -1,0 +1,124 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .acessibilidade{
+            font-size: 16px;
+
+        }
+
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.3/examples/sign-in/signin.css" rel="stylesheet">
+</head>
+<body class="text-center">
+    
+
+    <form class="form-signin">
+        <h1 class="h3 mb-3 font-weight-normal">BIBLIOTECA HBSIS</h1>
+
+
+        <input type="text" nome="nome" id="nome" class="form-control acessibilidade" placeholder="Nome" required autofocus />
+        
+        <label for="inputPassword" class="sr-only">Senha</label>
+
+        <input type="password" id="senha" class="form-control acessibilidade" placeholder="Senha" required />
+
+        <button class="btn btn-lg btn-primary btn-block" onclick="Pesquisar()" type="button">Entrar</button>
+
+        <button class="btn btn-lg btn-primary btn-block" onclick="fonte('a')" type="button">AUMENTAR</button>
+        <button class="btn btn-lg btn-primary btn-block" onclick="fonte('d')" type="button">DIMINUIR</button>
+
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            var foo = { nome: 'Bruno', sobrenome: 'Piske', idade: 30 };
+
+            var bar = Object.create(foo);
+
+            bar.temskol = true;
+
+            bar.nome;
+            bar.sobrenome;
+            bar.idade;
+
+            /*json*/
+            bar.data = [
+                {
+                    "Id": 1,
+                    "Nome": "Bruno Piske",
+                    "Idade": 30,
+                    "Senha": 1234
+                },
+                {
+                    "Id": 2,
+                    "Nome": "Zumira Andrade",
+                    "Idade": 69
+                },
+
+            ];
+
+            //$.each(bar.data[0], function (key, value) { alert("key:" + key + "Value:" + value): })
+
+            function Pesquisar() {
+                $.each(bar.data,
+                    function (index, object) {
+                        var contentVal = $('#nome').val();
+                        var contentSenha = $('#senha').val();
+
+                        if (object.Nome === contentVal && object.Senha == contentSenha) {   
+                            alert('Login Efetuado com Sucesso');
+
+                        } else {
+                            alert('Usuário Não Encontrado!');
+                            return false;
+                        }
+                            
+                    });
+            }
+
+
+
+        </script>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+            function fonte(e) {
+                var elemento = $(".acessibilidade");
+                var fonte = elemento.css('font-size');
+                if (e == 'a') {
+                    elemento.css("fontSize", parseInt(fonte) + 1);
+                } else if ('d') {
+                    elemento.css("fontSize", parseInt(fonte) - 1);
+                }
+            }
+        </script>
+
+    </form>
+</body>
+</html>

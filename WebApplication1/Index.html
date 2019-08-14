@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap-grid.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <!--https://httpbin.org/get-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" style="background-color:royalblue; text-align:center; padding:5px;">
+                <input id="Button1" type="button" value="Pesquisar" />
+            </div>
+            <div class="col-md-6" style="background-color:royalblue; text-align:center; padding:5px;">
+                <input id="Button1" type="button" value="Apagar" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label for="Accept">Accept</label>
+                <input type="text" id="Accept" rows="5" cols="5" style="width:100%;  min-height:25%" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <label for="Accept-Encoding">Accept-Encoding</label>
+                <input type="text" id="Accept-Encoding" rows="4" cols="5" style="width:100%;  min-height:25%" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <label for="Accept-Language">Accept-Language</label>
+                <input type="text" id="Accept-Language" rows="4" cols="5" style="width:100%;  min-height:25%" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <label for="Host">Host</label>
+                <input type="text" id="Host" rows="4" cols="5" style="width:100%;  min-height:25%" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <label for="Sec-Fetch-Mode">Sec-Fetch-Mode</label>
+                <input type="text" id="Sec-Fetch-Mode" rows="4" cols="5" style="width:100%;  min-height:25%" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <label for="Sec-Fetch-Site">Sec-Fetch-Site</label>
+                <input type="text" id="Sec-Fetch-Site" rows="4" cols="5" style="width:100%;  min-height:25%" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <label for="Upgrade-Insecure-Requests">Upgrade-Insecure-Requests</label>
+                <input type="text" id="Upgrade-Insecure-Requests" rows="4" cols="5" style="width:100%;  min-height:25%" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <label for="User-Agent">User-Agent</label>
+                <input type="text" id="User-Agent" rows="4" cols="5" style="width:100%;  min-height:25%" />
+            </div>
+        </div>
+
+    </div>
+    <script src="Scripts/bootstrap.bundle.js"></script>  
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/jquery-3.4.1.js"></script>
+    <script>
+
+        $(function () {
+            $('blockbackground').show(500);
+            $('#Button1').click(function () {
+                $('blockbackground').hide();
+                $.get('https://httpbin.org/get', function (data, textStatus, jqXHR) {
+                    $("#Accept").val(data.headers.Accept);
+                    $("#Accept-Encoding").val(data.headers['Accept-Encoding']);
+                    $("#Accept-Language").val(data.headers['Accept-Language']);
+                    $("#Host").val(data.headers.Host);
+                    $("#Sec-Fetch-Mode").val(data.headers['Sec-Fetch-Mode']);
+                    $("#Sec-Fetch-Site").val(data.headers['Sec-Fetch-Site']);
+                    $("#Upgrade-Insecure-Requests").val(data.headers['Upgrade-Insecure-Requests']);
+                    $("#User-Agent").val(data.headers['User-Agent']);
+
+
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>

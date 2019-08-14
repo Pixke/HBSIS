@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+          <title>Projeto Web</title>
+      </head>
+      <body>
+      <div>
+          <label>Pesquisa</label>
+          <label>Nome</label>
+          <input type="text" nome="nome" id="nome" placeholder="Informe o Nome a ser Pesquisado" />
+          <button onclick="Pesquisar()"> Pesquisar </button>
+              
+      </div>
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+      <script>
+          var foo = { nome: 'Bruno', sobrenome: 'Piske', idade: 30 };
+
+          var bar = Object.create(foo);
+
+          bar.temskol = true;
+
+          bar.nome;
+          bar.sobrenome;
+          bar.idade;
+
+          /*json*/
+          bar.data = [
+              {
+                  "Id": 1,
+                  "Nome": "Bruno Piske",
+                  "Idade": 30
+              },
+              {
+                  "Id": 2,
+                  "Nome": "Zumira Andrade",
+                  "Idade": 69   
+              }
+          ];
+
+          //$.each(bar.data[0], function (key, value) { alert("key:" + key + "Value:" + value): })
+
+          function Pesquisar() {
+              $.each(bar.data,
+                  function (index, object) {
+                      var contentVal = $('#nome').val();
+
+                      if (object.Nome.indexOf(contentVal) > -1) {
+                          alert('Encontrado');
+
+                      }
+                  });
+          }
+
+
+
+      </script>
+      </body>
+</html>

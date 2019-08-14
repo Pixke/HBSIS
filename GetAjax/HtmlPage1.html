@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-6" style="background-color: khaki ; text-align:left; padding:5px;">
+                    <label for="cep:">CEP:</label>
+                    <input type="text" id="cep:" rows="1" cols="1" style="width:50%;  min-height:50%" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6" style="background-color:cadetblue ; text-align:left; padding:5px;">
+                <input id="Button1" type="button" value="Pesquisar" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6" style="background-color: khaki ; text-align:left; padding:5px;">
+                <label for="logradouro:">Logradouro:</label>
+                <input type="text" id="logradouro:" rows="1" cols="1" style="width:50%;  min-height:50%" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6" style="background-color: khaki ; text-align:left; padding:5px;">
+                <label for="complemento:">Complemento:</label>
+                <input type="text" id="complemento:" rows="1" cols="1" style="width:50%;  min-height:50%" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6" style="background-color: khaki ; text-align:left; padding:5px;">
+                <label for="bairro:">Bairro:</label>
+                <input type="text" id="bairro:" rows="1" cols="1" style="width:50%;  min-height:50%" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6" style="background-color: khaki ; text-align:left; padding:5px;">
+                <label for="localidade:">Localidade:</label>
+                <input type="text" id="localidade:" rows="1" cols="1" style="width:50%;  min-height:50%" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6" style="background-color: khaki ; text-align:left; padding:5px;">
+                <label for="uf:">UF:</label>
+                <input type="text" id="uf:" rows="1" cols="1" style="width:50%;  min-height:50%" />
+            </div>
+        </div>
+    </div>
+
+    <script src="Scripts/bootstrap.bundle.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/jquery-3.4.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("Button1").click(function () {
+                $.get("https://viacep.com.br/ws/38402100/json/", function (data, status) {
+                    alert("cep: " + data + "\nStatus: " + status);
+                });
+            });
+        });
+
+    </script>
+
+
+
+</body>
+</html>
+
+
