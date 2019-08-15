@@ -10,8 +10,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="col-md-6" style="background-color: khaki ; text-align:left; padding:5px;">
-                    <label for="cep:">CEP:</label>
-                    <input type="text" id="cep:" rows="1" cols="1" style="width:50%;  min-height:50%" />
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" rows="1" cols="1" style="width:50%;  min-height:50%" />
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@
         <div class="col-md-12">
             <div class="col-md-6" style="background-color: khaki ; text-align:left; padding:5px;">
                 <label for="logradouro:">Logradouro:</label>
-                <input type="text" id="logradouro:" rows="1" cols="1" style="width:50%;  min-height:50%" />
+                <input type="text" id="logradouro" rows="1" cols="1" style="width:50%;  min-height:50%" />
             </div>
         </div>
     </div>
@@ -36,7 +36,7 @@
         <div class="col-md-12">
             <div class="col-md-6" style="background-color: khaki ; text-align:left; padding:5px;">
                 <label for="complemento:">Complemento:</label>
-                <input type="text" id="complemento:" rows="1" cols="1" style="width:50%;  min-height:50%" />
+                <input type="text" id="complemento" rows="1" cols="1" style="width:50%;  min-height:50%" />
             </div>
         </div>
     </div>
@@ -45,7 +45,7 @@
         <div class="col-md-12">
             <div class="col-md-6" style="background-color: khaki ; text-align:left; padding:5px;">
                 <label for="bairro:">Bairro:</label>
-                <input type="text" id="bairro:" rows="1" cols="1" style="width:50%;  min-height:50%" />
+                <input type="text" id="bairro" rows="1" cols="1" style="width:50%;  min-height:50%" />
             </div>
         </div>
     </div>
@@ -54,7 +54,7 @@
         <div class="col-md-12">
             <div class="col-md-6" style="background-color: khaki ; text-align:left; padding:5px;">
                 <label for="localidade:">Localidade:</label>
-                <input type="text" id="localidade:" rows="1" cols="1" style="width:50%;  min-height:50%" />
+                <input type="text" id="localidade" rows="1" cols="1" style="width:50%;  min-height:50%" />
             </div>
         </div>
     </div>
@@ -63,20 +63,26 @@
         <div class="col-md-12">
             <div class="col-md-6" style="background-color: khaki ; text-align:left; padding:5px;">
                 <label for="uf:">UF:</label>
-                <input type="text" id="uf:" rows="1" cols="1" style="width:50%;  min-height:50%" />
+                <input type="text" id="uf" rows="1" cols="1" style="width:50%;  min-height:50%" />
             </div>
         </div>
     </div>
 
-    <script src="Scripts/bootstrap.bundle.js"></script>
+
     <script src="Scripts/bootstrap.js"></script>
     <script src="Scripts/jquery-3.4.1.js"></script>
+    <script src="Scripts/bootstrap.bundle.js"></script>
 
     <script>
         $(document).ready(function () {
-            $("Button1").click(function () {
-                $.get("https://viacep.com.br/ws/38402100/json/", function (data, status) {
-                    alert("cep: " + data + "\nStatus: " + status);
+            $('#Button1').click(function () {
+                $.get('https://viacep.com.br/ws/' + cep.value + '/json/', function (data, status) {
+                    $('#cep').val(data['cep']);
+                    $('#logradouro').val(data['logradouro']);
+                    $('#complemento').val(data['complemento']);
+                    $('#bairro').val(data['bairro']);
+                    $('#localidade').val(data['localidade']);
+                    $('#uf').val(data['uf']);
                 });
             });
         });
