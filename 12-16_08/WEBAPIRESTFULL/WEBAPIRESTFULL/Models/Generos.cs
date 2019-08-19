@@ -1,5 +1,6 @@
 namespace WEBAPIRESTFULL.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -17,12 +18,17 @@ namespace WEBAPIRESTFULL.Models
         public int Id { get; set; }
 
         [Required]
+        [StringLength(1200)]
+
+        public string Titulo { get; set; }
+
         [StringLength(200)]
+
         public string Tipo { get; set; }
 
         [StringLength(1000)]
         public string Descricao { get; set; }
-
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Livros> Livros { get; set; }
     }
