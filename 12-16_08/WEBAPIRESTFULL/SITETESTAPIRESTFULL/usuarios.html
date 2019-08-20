@@ -350,13 +350,12 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
           <li class="treeview">
-            <a href="usuarios.html">
-              <i class="fa   fa-cog"></i> <span>Usuários</span>
+            <a href="usuarios.html"><i class="fa   fa-cog"></i> <span>ADMINISTRAÇÃO</span>
             </a>
           </li>
           <li class="treeview">
             <a href="index.html">
-              <i class="fa   fa-cog"></i> <span>ADMINISTRAÇÃO</span>
+              <i class="fa   fa-cog"></i> <span>Usuários</span>
             </a>
           </li>
           <li class="treeview">
@@ -409,12 +408,12 @@
 	  
       <section class="content" style="margin-bottom:0px;padding-bottom:0px;min-height:0px;">
         <!-- Small boxes (Stat box) -->
-        <form  name="formusuarios" id="formusuarios"  class="box box-primary  collapsed-box" >
+        <form  name="formusuarios" id="formusuarios" send-post="Usuarios"  class="box box-primary  collapsed-box form-post" >
           <div class="box-header with-border">
             <h3 class="box-title">Usuários</h3>
 			
 			<div class="box-tools pull-right">
-				<button type="button" class="btn btn-block btn-primary" data-widget="collapse"><i class="fa fa-plus"></i></button>
+				<button id="collapse-btn" type="button" class="btn btn-block btn-primary" data-widget="collapse"><i class="fa fa-plus"></i></button>
 			</div>
           </div>
           <!-- hidden field -->
@@ -734,7 +733,8 @@
 	  <script src="dist/js/pages/dashboard.js"></script>
 	  <!-- AdminLTE for demo purposes -->
 	  <script src="dist/js/demo.js"></script>
-	  <!-- Custom page script sections -->
+    <!-- Custom page script sections -->
+    <script src="js/utils.js"></script>
 	  <script src="js/usuarios.js"></script>
   </scriptsection>
 </body>

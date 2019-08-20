@@ -7,7 +7,7 @@ namespace WEBAPIRESTFULL.Models
     using System.Data.Entity.Spatial;
 
     [Table("Locacao")]
-    public partial class Locacao
+    public partial class Locacao : UserControls
     {
         public int Id { get; set; }
 
