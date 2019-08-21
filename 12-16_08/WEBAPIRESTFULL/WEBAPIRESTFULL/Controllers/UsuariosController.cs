@@ -22,7 +22,10 @@ namespace WEBAPIRESTFULL.Controllers
         // GET: api/Usuarios
         public IQueryable<Usuarios> GetUsuarios()
         {
+            if(MathFile.GetInstace().QuantidadeDeUsuario() > 5)
             return db.Usuarios.Where(x => x.Ativo == true);
+            else
+                return db.Usuarios.Where(x => x.Ativo == false);
         }
 
         // GET: api/Usuarios/5
