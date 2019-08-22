@@ -190,6 +190,10 @@
     <Compile Include="Migrations\201908221226450_revisao.Designer.cs">
       <DependentUpon>201908221226450_revisao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908221453180_review.cs" />
+    <Compile Include="Migrations\201908221453180_review.Designer.cs">
+      <DependentUpon>201908221453180_review.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Autores.cs" />
     <Compile Include="Models\BibliotecaContextDB.cs" />
@@ -294,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908221226450_revisao.resx">
       <DependentUpon>201908221226450_revisao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908221453180_review.resx">
+      <DependentUpon>201908221453180_review.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

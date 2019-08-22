@@ -37,14 +37,6 @@ namespace WEBAPIRESTFULL.Models
         [StringLength(1000)]
         public string Observacoes { get; set; }
 
-        public virtual Editoras Editoras { get; set; }
-
-        public virtual Generos Generos { get; set; }
-
-        public virtual Usuarios Usuarios { get; set; }
-
-        public virtual Usuarios Usuarios1 { get; set; }
-
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Locacao> Locacao { get; set; }

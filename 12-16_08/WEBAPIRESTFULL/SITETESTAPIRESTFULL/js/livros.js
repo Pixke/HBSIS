@@ -1,9 +1,9 @@
+
 var generosList;
 var editorasList;
 
 jQuery(document).ready(function(){
     var settings = {
-        "async": true,
         "crossDomain": true,
         "url": "http://localhost:59271/Api/Generos",
         "method": "GET",
@@ -17,12 +17,11 @@ jQuery(document).ready(function(){
             generosList = response;
 
             $.each(response,function(index,value){
-                $('#Genero')[0].innerHTML += '<option value=\''+ value.Id +'\'>'+ value.Tipo +'</option>';
+                $('#Generos')[0].innerHTML += '<option value=\''+ value.Id +'\'>'+ value.Tipo +'</option>';
             });
         });
 
         settings = {
-        "async": true,
         "crossDomain": true,
         "url": "http://localhost:59271/Api/Editoras",
         "method": "GET",
@@ -36,7 +35,7 @@ jQuery(document).ready(function(){
             editorasList = response;
 
             $.each(response,function(index,value){
-                $('#Editora')[0].innerHTML += '<option value=\''+ value.Id +'\'>'+ value.Nome +'</option>';
+                $('#Editoras')[0].innerHTML += '<option value=\''+ value.Id +'\'>'+ value.Nome +'</option>';
             });
         });
 
@@ -45,7 +44,6 @@ jQuery(document).ready(function(){
 
 function GetMethod(object){
     var settings = {
-        "async": true,
         "crossDomain": true,
         "url": "http://localhost:59271/Api/Livros",
         "method": "GET",
