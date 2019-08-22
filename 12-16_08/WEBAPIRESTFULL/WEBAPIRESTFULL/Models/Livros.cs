@@ -37,16 +37,6 @@ namespace WEBAPIRESTFULL.Models
         [StringLength(1000)]
         public string Observacoes { get; set; }
 
-        public bool Ativo { get; set; }
-
-        public int UsuInc { get; set; }
-
-        public int UsuAlt { get; set; }
-
-        public DateTime DatInc { get; set; }
-
-        public DateTime DatAlt { get; set; }
-
         public virtual Editoras Editoras { get; set; }
 
         public virtual Generos Generos { get; set; }

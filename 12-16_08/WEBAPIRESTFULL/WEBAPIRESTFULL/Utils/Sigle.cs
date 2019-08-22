@@ -7,7 +7,7 @@ using System.Web;
 
 namespace WEBAPIRESTFULL.Utils
 {
-    public class Sigle <T> : IDisposable
+    public class Single<T> : IDisposable
     {
         private static object _instance = null;
 
@@ -20,10 +20,12 @@ namespace WEBAPIRESTFULL.Utils
 
             return (T)_instance;
         }
+
         SafeHandle handle = new SafeFileHandle(IntPtr.Zero, true);
 
         #region IDisposable Support
         private bool disposedValue = false; 
+
         protected virtual void Dispose(bool disposing)
         {
             if (!disposedValue)
@@ -33,11 +35,9 @@ namespace WEBAPIRESTFULL.Utils
                     handle.Dispose();
                 }
 
-
                 disposedValue = true;
             }
         }
-
         void IDisposable.Dispose()
         {
             _instance = null;

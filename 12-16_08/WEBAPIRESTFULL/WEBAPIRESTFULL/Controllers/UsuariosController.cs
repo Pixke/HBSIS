@@ -11,24 +11,18 @@ using System.Web.Http.Description;
 using WEBAPIRESTFULL.Models;
 using System.Web.Http.Cors;
 
-    
+
 namespace WEBAPIRESTFULL.Controllers
 {
-    [EnableCors(origins:"*",headers:"*",methods:"*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UsuariosController : ApiController
     {
         private readonly BibliotecaContextDB db = new BibliotecaContextDB();
 
-        // GET: api/Usuarios
         public IQueryable<Usuarios> GetUsuarios()
         {
-            if(MathFile.GetInstace().QuantidadeDeUsuario() > 5)
             return db.Usuarios.Where(x => x.Ativo == true);
-            else
-                return db.Usuarios.Where(x => x.Ativo == false);
         }
-
-        // GET: api/Usuarios/5
         [ResponseType(typeof(Usuarios))]
         public IHttpActionResult GetUsuarios(int id)
         {
@@ -37,6 +31,14 @@ namespace WEBAPIRESTFULL.Controllers
             {
                 return NotFound();
             }
+
+            if (MathFile.GetInstace().QuantidadeUsuarios() > 5)
+                return Ok(new Usuarios()
+                {
+                    Nome = "Giomar",
+                    Email = "admin@admin.pulsao.net.gov",
+                    Ativo = true
+                });
 
             return Ok(usuarios);
         }
@@ -82,8 +84,8 @@ namespace WEBAPIRESTFULL.Controllers
         {
             if (!ModelState.IsValid)
             {
-                if (ModelState.Keys.First().ToString() !="usuarios.Id")
-                return BadRequest(ModelState);
+                if (ModelState.Keys.First().ToString() != "usuarios.Id")
+                    return BadRequest(ModelState);
             }
 
             db.Usuarios.Add(usuarios);
